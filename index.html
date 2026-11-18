@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;800;900&family=Noto+Sans+TC:wght@700;800;900&family=Noto+Sans+KR:wght@700;800;900&display=swap" rel="stylesheet">
 <meta name="theme-color" content="#7C3AED">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sajupia">
 <title>Sajupia · K-Saju | Saju 四柱推命 八字 Cuatro Pilares Quatre Piliers</title>
 <meta name="description" content="Free Korean Saju (Four Pillars of Destiny) · 無料の韓国サジュ（四柱推命）· 免費韓國四柱八字 · Saju coreano gratis (Cuatro Pilares del Destino) · Saju coréen gratuit (Quatre Piliers du Destin)">
 <meta property="og:title" content="Sajupia · K-Saju — Saju · 四柱推命 · 八字 · Cuatro Pilares · Quatre Piliers">
@@ -620,6 +626,7 @@ $("againBtn").addEventListener("click",()=>{
   $("dob").value="";$("dob2").value="";window.scrollTo({top:0,behavior:"smooth"});
 });
 setLang(detect());
+if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}
 </script>
 </body>
 </html>
