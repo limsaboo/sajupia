@@ -1157,7 +1157,7 @@ function showProd(kind){
   const ready=()=>{ try{document.fonts.ready.then(go);}catch(e){go();} };
   if(kind==="t") return ready();
   if(dollImg&&dollImg._k===dollKey) return ready();
-  const im=new Image(); im._k=dollKey; im.onload=()=>{dollImg=im; ready();}; im.src="dolls/doll_"+dollKey+".webp";
+  const im=new Image(); im._k=dollKey; im.onload=()=>{dollImg=im; ready();}; im.src="doll/doll_"+dollKey+".webp";
 }
 
 const APP_LINKS={munjo:"munjo/",gwang:"gwangdeok/"};
