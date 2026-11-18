@@ -39,8 +39,8 @@ button,input{font-family:inherit}
 .shout{display:block;margin:0 auto 18px;max-width:340px;background:#FACC15;color:#111;border:3px solid #111;border-radius:18px;padding:10px 14px;font-size:22px;line-height:1.5;font-weight:900;text-wrap:balance}
 .shout .ask{display:block;margin-top:2px;font-size:24px;color:#B91C1C}
 .brand{font-size:15px;letter-spacing:.2em;font-weight:900;white-space:nowrap}
-.langs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
-.chip{width:auto;margin:0;padding:6px 14px;font-size:16px;line-height:1.6;border-radius:999px;border:2px solid #fff;background:rgba(0,0,0,.18);color:#fff;font-weight:900;white-space:nowrap;cursor:pointer;font-family:inherit}
+.langs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px auto 0;max-width:340px}
+.chip{width:100%;margin:0;padding:6px 6px;font-size:16px;line-height:1.6;border-radius:999px;border:2px solid #fff;background:rgba(0,0,0,.18);color:#fff;font-weight:900;white-space:nowrap;cursor:pointer;font-family:inherit}
 .chip.on{background:#fff;color:#111}
 .hero h1{margin:16px 0 10px;font-size:32px;line-height:1.35;font-weight:900;text-wrap:balance}
 .hero p{margin:0;font-size:18px;line-height:1.8;font-weight:700;text-wrap:balance}
@@ -56,8 +56,26 @@ button.act{font:inherit;font-weight:900;cursor:pointer;border:3px solid #111;bor
 .btn-share{background:#15803D;margin-top:14px}
 .btn-alt{background:#7C3AED;margin-top:14px}
 .steps{display:grid;gap:12px;margin:16px 14px 0}
-.step{border-radius:18px;padding:16px 18px;color:#fff;border:3px solid #111;font-size:18px;font-weight:800;line-height:1.7}
-.step b{font-size:20px;font-weight:900;display:block}
+.step{border-radius:22px;padding:0;overflow:hidden;color:#fff;border:3px solid #111;font-size:18px;font-weight:800;line-height:1.7}
+.step svg{display:block;width:100%;height:auto;background:rgba(0,0,0,.16);border-bottom:3px solid #111}
+.step .pt{padding:12px 18px 16px}
+.step b{font-size:22px;font-weight:900;display:block;line-height:1.5}
+.step span{display:block;text-wrap:balance}
+.apps{margin:22px 14px 0;display:grid;gap:14px}
+.apps h2{margin:0;font-size:22px;line-height:1.5;font-weight:900;text-align:center;text-wrap:balance}
+a.poster{display:block;border:3px solid #111;border-radius:22px;overflow:hidden;color:#fff;text-decoration:none;cursor:pointer}
+a.poster svg{display:block;width:100%;height:auto;border-bottom:3px solid #111}
+a.poster .pt{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 16px 16px}
+a.poster b{display:block;font-size:24px;font-weight:900;line-height:1.5;white-space:nowrap}
+a.poster small{display:block;font-size:16px;font-weight:800;line-height:1.65;text-wrap:balance}
+a.tlink{display:block;border:3px solid #111;border-radius:22px;padding:18px 16px;text-align:center;color:#fff;text-decoration:none;cursor:pointer;background:linear-gradient(160deg,#7C3AED,#B91C1C)}
+a.tlink .fu{display:inline-block;background:#B91C1C;color:#FACC15;border:3px solid #FACC15;font-size:34px;font-weight:900;line-height:1;padding:8px 10px;margin-bottom:10px}
+a.tlink b{display:block;font-size:22px;font-weight:900;line-height:1.7}
+a.tlink b span{display:block;text-wrap:balance;word-break:keep-all}
+a.tlink .go{display:inline-block;margin-top:12px;background:#FACC15;color:#111;border:3px solid #111;border-radius:999px;padding:10px 20px;font-size:18px;font-weight:900;white-space:nowrap}
+a.poster .go{background:#FACC15;color:#111;border:3px solid #111;border-radius:999px;padding:8px 14px;font-size:17px;font-weight:900;white-space:nowrap}
+.po-m{background:linear-gradient(160deg,#B91C1C,#F59E0B)}
+.po-g{background:linear-gradient(160deg,#7C3AED,#B91C1C)}
 .s1{background:#15803D}.s2{background:#D97706}.s3{background:#1D4ED8}
 .hidden{display:none}
 .result-card{margin:16px 14px 0;border-radius:24px;padding:26px 20px;color:#fff;text-align:center;border:3px solid #111}
@@ -85,6 +103,46 @@ button.act{font:inherit;font-weight:900;cursor:pointer;border:3px solid #111;bor
 .foot{margin:18px 14px 0;text-align:center;font-size:15px;font-weight:800;line-height:1.8}
 .foot div{text-wrap:balance}
 .nowrap{white-space:nowrap}
+
+select{width:100%;font:inherit;font-weight:800;font-size:19px;padding:14px;border:3px solid #111;border-radius:14px;background:#FEF3C7;color:#111}
+html[lang="ko"] select{font-family:"SajuLatin","Noto Sans KR","Noto Sans CJK KR",sans-serif}
+html[lang="ja"] select{font-family:"SajuLatin","Noto Sans JP","Noto Sans CJK JP","Noto Sans KR",sans-serif}
+html[lang="zh-Hant"] select{font-family:"SajuLatin","Noto Sans TC","Noto Sans CJK TC","Noto Sans KR",sans-serif}
+select:focus{outline:4px solid #DB2777}
+.deep{background:#fff}
+.deep h2{background:linear-gradient(90deg,#7C3AED,#DB2777);color:#fff;margin:-22px -20px 14px;padding:16px 20px;border-radius:19px 19px 0 0}
+.dp-sec{margin-top:22px}
+.dp-h{color:#fff;border:3px solid #111;border-radius:14px;padding:8px 14px;font-size:20px;font-weight:900;line-height:1.5;text-wrap:balance;margin-bottom:10px}
+.dp-q{font-size:19px;font-weight:900;line-height:1.7;color:#B91C1C;margin:8px 0;text-wrap:balance}
+.dp-p{margin:10px 0 0;font-size:18px;line-height:1.95;font-weight:700;color:#111}
+.pcs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.pc{border:3px solid #111;border-radius:14px;background:#F3F4F6;text-align:center;padding:6px 2px 8px}
+.pc.hl{background:#FACC15}
+.pc i{display:block;font-style:normal;font-size:14px;font-weight:900;line-height:1.5;min-height:42px;color:#111;text-wrap:balance;padding:0 2px}
+.pc b{display:block;font-size:38px;line-height:1.3;font-weight:900}
+.tl{border:3px solid #111;border-radius:18px;padding:14px 16px;margin-top:10px;color:#fff}
+.tl b{display:block;font-size:19px;font-weight:900;line-height:1.6}
+.tl span{display:block;font-size:18px;line-height:1.85;font-weight:700}
+.tl-p{background:#475569}.tl-n{background:#DC2626}.tl-f{background:#15803D}
+.movie{background:#111;border:3px solid #111;border-radius:18px;padding:16px 16px 18px;color:#fff}
+.mtag{display:inline-block;background:#FACC15;color:#111;border-radius:999px;padding:4px 14px;font-size:15px;font-weight:900}
+.mtitle{font-size:26px;line-height:1.45;font-weight:900;color:#FACC15;margin:10px 0 6px;text-wrap:balance}
+.sc{border-top:2px dashed #FACC15;margin-top:12px;padding-top:10px}
+.sc b{display:block;font-size:18px;font-weight:900;color:#F9A8D4;line-height:1.6}
+.sc span{display:block;font-size:18px;line-height:1.9;font-weight:700}
+.cta{margin-top:24px;border:3px solid #111;border-radius:20px;background:linear-gradient(160deg,#B91C1C,#7C3AED);color:#fff;padding:18px 16px}
+.cta h3{margin:0 0 6px;font-size:21px;line-height:1.5;font-weight:900;text-wrap:balance}
+.cta p{margin:0 0 6px;font-size:18px;line-height:1.8;font-weight:700}
+button.act.cta-b{background:#FACC15;color:#111;margin-top:12px;text-align:center}
+.cta-b small{display:block;font-size:15px;font-weight:800;line-height:1.6;margin-top:2px;text-wrap:balance}
+button.act.cta-d{background:#fff}
+button.act.cta-s{background:#F9A8D4}
+.setbadge{margin-top:14px;background:#111;color:#FACC15;border:3px solid #FACC15;border-radius:999px;padding:8px 14px;text-align:center;font-size:19px;font-weight:900;line-height:1.5;text-wrap:balance}
+.cta .tip{color:#111}
+.dollc{margin-top:14px;background:#fff;color:#111;border:3px solid #111;border-radius:18px;padding:16px;text-align:center}
+.dollc b{display:block;font-size:22px;font-weight:900;line-height:1.5;text-wrap:balance}
+.dollc canvas{width:100%;max-width:300px;height:auto;display:block;margin:8px auto;background:linear-gradient(160deg,#FEF3C7,#FBCFE8);border:3px solid #111;border-radius:18px}
+.dollc>span{display:block;font-size:17px;line-height:1.8;font-weight:800;text-wrap:balance}
 </style>
 </head>
 <body>
@@ -114,12 +172,16 @@ button.act{font:inherit;font-weight:900;cursor:pointer;border:3px solid #111;bor
       <input id="name" type="text" maxlength="24" autocomplete="given-name">
       <label for="dob" data-k="dobLabel"></label>
       <input id="dob" type="date" min="1900-01-01" max="2100-12-31">
+      <label for="tm" id="lblTime"></label>
+      <select id="tm"></select>
+      <label for="gn" id="lblGen"></label>
+      <select id="gn"></select>
       <button class="act btn-main" id="goBtn" type="button" data-k="go"></button>
     </div>
     <div class="steps">
-      <div class="step s1"><b data-k="s1b"></b><span data-k="s1t"></span></div>
-      <div class="step s2"><b data-k="s2b"></b><span data-k="s2t"></span></div>
-      <div class="step s3"><b data-k="s3b"></b><span data-k="s3t"></span></div>
+      <div class="step s1"><svg viewBox="0 0 360 160" aria-hidden="true"><circle cx="180" cy="80" r="56" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="3 7"/><circle cx="180.0" cy="24.0" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="180.0" y="31.0" text-anchor="middle" font-size="20" font-weight="900" fill="#15803D">甲</text><circle cx="212.9" cy="34.7" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="212.9" y="41.7" text-anchor="middle" font-size="20" font-weight="900" fill="#15803D">乙</text><circle cx="233.3" cy="62.7" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="233.3" y="69.7" text-anchor="middle" font-size="20" font-weight="900" fill="#DC2626">丙</text><circle cx="233.3" cy="97.3" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="233.3" y="104.3" text-anchor="middle" font-size="20" font-weight="900" fill="#DC2626">丁</text><circle cx="212.9" cy="125.3" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="212.9" y="132.3" text-anchor="middle" font-size="20" font-weight="900" fill="#D97706">戊</text><circle cx="180.0" cy="136.0" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="180.0" y="143.0" text-anchor="middle" font-size="20" font-weight="900" fill="#D97706">己</text><circle cx="147.1" cy="125.3" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="147.1" y="132.3" text-anchor="middle" font-size="20" font-weight="900" fill="#475569">庚</text><circle cx="126.7" cy="97.3" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="126.7" y="104.3" text-anchor="middle" font-size="20" font-weight="900" fill="#475569">辛</text><circle cx="126.7" cy="62.7" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="126.7" y="69.7" text-anchor="middle" font-size="20" font-weight="900" fill="#1D4ED8">壬</text><circle cx="147.1" cy="34.7" r="16" fill="#FFFFFF" stroke="#111" stroke-width="2.5"/><text x="147.1" y="41.7" text-anchor="middle" font-size="20" font-weight="900" fill="#1D4ED8">癸</text><circle cx="180" cy="80" r="36" fill="#FACC15" stroke="#111" stroke-width="3.5"/><text x="180" y="95" text-anchor="middle" font-size="42" font-weight="900" fill="#111">日</text></svg><div class="pt"><b data-k="s1b"></b><span data-k="s1t"></span></div></div>
+      <div class="step s2"><svg viewBox="0 0 360 160" aria-hidden="true"><polygon points="180.0,28.0 231.4,65.3 211.7,125.7 148.3,125.7 128.6,65.3" fill="#FEF3C7" stroke="#111" stroke-width="3"/><polygon points="180.0,45.3 223.1,68.0 194.0,101.2 161.0,108.2 141.0,69.3" fill="#DC2626" fill-opacity=".45" stroke="#DC2626" stroke-width="4" stroke-linejoin="round"/><circle cx="180.0" cy="20.0" r="17" fill="#15803D" stroke="#fff" stroke-width="3"/><text x="180.0" y="27.0" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">木</text><circle cx="239.0" cy="62.8" r="17" fill="#DC2626" stroke="#fff" stroke-width="3"/><text x="239.0" y="69.8" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">火</text><circle cx="216.4" cy="132.2" r="17" fill="#D97706" stroke="#fff" stroke-width="3"/><text x="216.4" y="139.2" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">土</text><circle cx="143.6" cy="132.2" r="17" fill="#475569" stroke="#fff" stroke-width="3"/><text x="143.6" y="139.2" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">金</text><circle cx="121.0" cy="62.8" r="17" fill="#1D4ED8" stroke="#fff" stroke-width="3"/><text x="121.0" y="69.8" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">水</text></svg><div class="pt"><b data-k="s2b"></b><span data-k="s2t"></span></div></div>
+      <div class="step s3"><svg viewBox="0 0 360 160" aria-hidden="true"><g transform="translate(78,22) scale(1.45)"><path d="M50,88 C10,55 0,30 20,15 C35,3 50,12 50,25 C50,12 65,3 80,15 C100,30 90,55 50,88 Z" fill="#F472B6" stroke="#111" stroke-width="2.4"/></g><g transform="translate(152,30) scale(1.45)"><path d="M50,88 C10,55 0,30 20,15 C35,3 50,12 50,25 C50,12 65,3 80,15 C100,30 90,55 50,88 Z" fill="#38BDF8" stroke="#111" stroke-width="2.4"/></g><text x="180" y="98" text-anchor="middle" font-size="40" font-weight="900" fill="#fff" stroke="#111" stroke-width="5" paint-order="stroke">96%</text><text x="180" y="132" text-anchor="middle" font-size="22" font-weight="900" fill="#FACC15" stroke="#111" stroke-width="4" paint-order="stroke">合</text></svg><div class="pt"><b data-k="s3b"></b><span data-k="s3t"></span></div></div>
     </div>
   </section>
 
@@ -137,6 +199,11 @@ button.act{font:inherit;font-weight:900;cursor:pointer;border:3px solid #111;bor
       <div class="read r-trait"><b data-k="who"></b><span id="rTrait"></span></div>
       <div class="read r-love"><b data-k="loveLbl"></b><span id="rLove"></span></div>
       <div class="read r-work"><b data-k="workLbl"></b><span id="rWork"></span></div>
+    </div>
+
+    <div class="card deep">
+      <h2 id="deepTitle"></h2>
+      <div id="deepBody"></div>
     </div>
 
     <div class="card">
@@ -170,7 +237,13 @@ button.act{font:inherit;font-weight:900;cursor:pointer;border:3px solid #111;bor
       <div class="tip hidden" id="shareMsg"></div>
       <button class="act btn-alt" id="againBtn" type="button" data-k="againBtn"></button>
     </div>
+
+    <div id="talisLink" class="apps" style="margin:18px 0 0"></div>
+
+    <div id="talBanner" class="apps" style="margin:18px 0 0"></div>
   </section>
+
+  <section id="appsArea" class="apps"></section>
 
   <div class="foot">
     <div>Sajupia</div>
@@ -212,6 +285,89 @@ function compat(a,b){
   if(A.p!==B.p) s+=4;
   return {score:Math.min(s,99),key};
 }
+/* ===== REPORT ENGINE (8 characters, luck cycles, analysis) ===== */
+const D2R=Math.PI/180;
+function sunLon(jd){
+  const T=(jd-2451545.0)/36525;
+  const L0=280.46646+36000.76983*T+0.0003032*T*T;
+  const M=(357.52911+35999.05029*T-0.0001537*T*T)*D2R;
+  const C=(1.914602-0.004817*T-0.000014*T*T)*Math.sin(M)+(0.019993-0.000101*T)*Math.sin(2*M)+0.000289*Math.sin(3*M);
+  const om=(125.04-1934.136*T)*D2R;
+  return mod(L0+C-0.00569-0.00478*Math.sin(om),360);
+}
+function jdAt(y,m,d,h){ return jdn(y,m,d)-0.5+(h-9)/24; }
+function termJD(target,guess){
+  let jd=guess;
+  for(let i=0;i<10;i++){
+    const diff=mod(target-sunLon(jd)+180,360)-180;
+    jd+=diff/0.98565;
+  }
+  return jd;
+}
+function chart(y,m,d,hr){
+  const h=hr<0?12:hr;
+  const jd=jdAt(y,m,d,h), lon=sunLon(jd);
+  let ys=y; if(m<=2 && lon>=200 && lon<315) ys=y-1;
+  const J=jdn(y,m,d);
+  const dayStem=mod(J+9,10), dayBranch=mod(J+1,12);
+  const yearStem=mod(ys-4,10), yearBranch=mod(ys-4,12);
+  const sec=Math.floor(mod(lon-315,360)/30);
+  const monthBranch=mod(2+sec,12);
+  const monthStem=mod(2*mod(yearStem,5)+2+sec,10);
+  let hourStem=null,hourBranch=null;
+  if(hr>=0){ hourBranch=Math.floor(((hr+1)%24)/2); hourStem=mod(2*mod(dayStem,5)+hourBranch,10); }
+  return {yearStem,yearBranch,monthStem,monthBranch,dayStem,dayBranch,hourStem,hourBranch,jd,sec,hasHour:hr>=0};
+}
+/* relation of element e to day-master element dm: 0 peer,1 output,2 wealth,3 power,4 resource */
+const relOf=(dm,e)=>mod(e-dm,5);
+function analyze(c){
+  const cnt=[0,0,0,0,0];
+  const stems=[c.yearStem,c.monthStem,c.dayStem], brs=[c.yearBranch,c.monthBranch,c.dayBranch];
+  if(c.hasHour){stems.push(c.hourStem);brs.push(c.hourBranch);}
+  stems.forEach(s=>cnt[STEM_META[s].e]++);
+  brs.forEach(b=>cnt[BR_META[b].e]++);
+  const sc=cnt.slice(); sc[BR_META[c.monthBranch].e]++;
+  const dm=STEM_META[c.dayStem].e;
+  const total=sc.reduce((a,b)=>a+b,0);
+  const strong=(sc[dm]+sc[mod(dm+4,5)])/total>=0.5;
+  let dom=0,weak=0;
+  for(let i=1;i<5;i++){ if(cnt[i]>cnt[dom]) dom=i; if(cnt[i]<cnt[weak]) weak=i; }
+  const emo=cnt[1]+cnt[4]+0.5*cnt[0], rea=cnt[3]+cnt[2]+0.5*cnt[0];
+  const emoPct=Math.round(emo/(emo+rea)*100);
+  const fav=e=>{ const r=relOf(dm,e); if(r===0||r===4) return strong?-1:1; return strong?1:-1; };
+  return {cnt,dm,strong,dom,weak,emoPct,fav,n:stems.length+brs.length};
+}
+function dayun(c,A,male){
+  const yang=STEM_META[c.yearStem].p===1;
+  const fwd=(male===false)?!yang:yang;
+  const target=fwd?mod(315+30*(c.sec+1),360):mod(315+30*c.sec,360);
+  const jdT=termJD(target,c.jd+(fwd?15:-15));
+  const days=Math.abs(jdT-c.jd);
+  const start=Math.max(1,Math.round(days/3));
+  const per=[];
+  const mk=(st,br,from,to,child)=>{
+    const rel=relOf(A.dm,STEM_META[st].e);
+    const fs=A.fav(STEM_META[st].e), fb=A.fav(BR_META[br].e);
+    let score=50+(fs>0?18:-14)+(fb>0?12:-9)+[2,5,7,1,4][rel]+((st*7+br*3)%5);
+    score=Math.max(25,Math.min(95,score));
+    per.push({stem:st,branch:br,from,to,child:!!child,rel,fav:fs>0,score});
+  };
+  mk(c.monthStem,c.monthBranch,0,start-1,true);
+  for(let k=1;k<=9;k++) mk(mod(c.monthStem+(fwd?k:-k),10),mod(c.monthBranch+(fwd?k:-k),12),start+10*(k-1),start+10*k-1,false);
+  return {fwd,start,per};
+}
+function ageOn(y,m,d,now){
+  now=now||new Date();
+  let a=now.getFullYear()-y;
+  if(now.getMonth()+1<m||(now.getMonth()+1===m&&now.getDate()<d)) a--;
+  return Math.max(0,a);
+}
+function curIndex(D,age){
+  for(let i=0;i<D.per.length;i++) if(age>=D.per[i].from&&age<=D.per[i].to) return i;
+  return D.per.length-1;
+}
+/* ===== END ENGINE ===== */
+
 //CALC_END
 
 const I18N={
@@ -235,7 +391,7 @@ en:{
  who:"Who you are",loveLbl:"Your love style",workLbl:"Your career energy",
  matchTitle:"Check your match",partnerLabel:"Partner or crush's birth date",matchBtn:"Check Compatibility",youL:"You",themL:"Them",
  lockTitle:"Your full Destiny Report",
- l1:"Complete 8-character chart with birth hour",l2:"Love timing: when your best chances come",l3:"Career and money cycles",l4:"2027 year-ahead forecast",l5:"Deep couple report for two people",
+ l1:"Your 10-year luck cycles in full detail",l2:"Love timing: when your best chances come",l3:"Career and money cycles",l4:"2027 year-ahead forecast",l5:"Deep couple report for two people",
  soon:"Full report launching soon",
  shareTitle:"Share your result",shareBtn:"Share My Destiny Card",againBtn:"Read Another Birth Date",
  copied:"Copied! Paste it anywhere to share.",copyFail:"Press and hold the link in your address bar to copy it.",
@@ -286,7 +442,7 @@ ko:{
  who:"나는 이런 사람",loveLbl:"나의 연애 스타일",workLbl:"나의 직업 기운",
  matchTitle:"궁합 보기",partnerLabel:"상대 또는 짝사랑 상대의 생년월일",matchBtn:"궁합 확인",youL:"나",themL:"상대",
  lockTitle:"전체 운명 리포트",
- l1:"태어난 시간까지 담은 사주팔자 전체",l2:"연애 시기: 좋은 인연이 오는 때",l3:"직업운과 재물운의 흐름",l4:"2027년 한 해 운세",l5:"두 사람을 위한 깊은 궁합 리포트",
+ l1:"10년 단위 대운 상세 풀이 전체",l2:"연애 시기: 좋은 인연이 오는 때",l3:"직업운과 재물운의 흐름",l4:"2027년 한 해 운세",l5:"두 사람을 위한 깊은 궁합 리포트",
  soon:"전체 리포트 곧 공개",
  shareTitle:"결과 공유하기",shareBtn:"운명 카드 공유",againBtn:"다른 생년월일 보기",
  copied:"복사했어요! 원하는 곳에 붙여넣어 공유하세요.",copyFail:"주소창의 링크를 길게 눌러 복사하세요.",
@@ -337,7 +493,7 @@ ja:{
  who:"あなたはこんな人",loveLbl:"恋愛スタイル",workLbl:"仕事のエネルギー",
  matchTitle:"相性を見る",partnerLabel:"パートナー・気になる人の生年月日",matchBtn:"相性をチェック",youL:"あなた",themL:"相手",
  lockTitle:"フル運命レポート",
- l1:"出生時刻を含む八字の完全な命式",l2:"恋愛のタイミング：チャンスが来る時期",l3:"仕事とお金のサイクル",l4:"2027年の年運予測",l5:"2人のための詳しい相性レポート",
+ l1:"10年ごとの大運の詳細な鑑定",l2:"恋愛のタイミング：チャンスが来る時期",l3:"仕事とお金のサイクル",l4:"2027年の年運予測",l5:"2人のための詳しい相性レポート",
  soon:"フルレポートは近日公開",
  shareTitle:"結果をシェア",shareBtn:"運命カードをシェア",againBtn:"別の生年月日を占う",
  copied:"コピーしました！好きな場所に貼り付けて共有できます。",copyFail:"アドレスバーのリンクを長押ししてコピーしてください。",
@@ -388,7 +544,7 @@ zh:{
  who:"你是什麼樣的人",loveLbl:"你的愛情風格",workLbl:"你的事業能量",
  matchTitle:"查看配對",partnerLabel:"伴侶或心儀對象的生日",matchBtn:"檢查契合度",youL:"你",themL:"對方",
  lockTitle:"你的完整命運報告",
- l1:"含出生時辰的完整八字命盤",l2:"愛情時機：你的好運何時到來",l3:"事業與財運週期",l4:"2027 年運勢預測",l5:"兩人的深度合盤報告",
+ l1:"每十年大運的詳細解讀",l2:"愛情時機：你的好運何時到來",l3:"事業與財運週期",l4:"2027 年運勢預測",l5:"兩人的深度合盤報告",
  soon:"完整報告即將推出",
  shareTitle:"分享你的結果",shareBtn:"分享我的命運卡",againBtn:"解讀另一個生日",
  copied:"已複製！貼到任何地方就能分享。",copyFail:"請長按網址列中的連結來複製。",
@@ -441,7 +597,7 @@ es:{
  who:"Quién eres",loveLbl:"Tu estilo en el amor",workLbl:"Tu energía profesional",
  matchTitle:"Mira tu compatibilidad",partnerLabel:"Fecha de nacimiento de tu pareja o crush",matchBtn:"Ver compatibilidad",youL:"Tú",themL:"Esa persona",
  lockTitle:"Tu Informe de Destino completo",
- l1:"Carta completa de 8 caracteres con hora de nacimiento",l2:"Momentos del amor: cuándo llegan tus mejores oportunidades",l3:"Ciclos de carrera y dinero",l4:"Pronóstico para 2027",l5:"Informe profundo de pareja para dos personas",
+ l1:"Lectura detallada de tus ciclos de suerte de 10 años",l2:"Momentos del amor: cuándo llegan tus mejores oportunidades",l3:"Ciclos de carrera y dinero",l4:"Pronóstico para 2027",l5:"Informe profundo de pareja para dos personas",
  soon:"Informe completo, muy pronto",
  shareTitle:"Comparte tu resultado",shareBtn:"Compartir mi tarjeta de destino",againBtn:"Leer otra fecha de nacimiento",
  copied:"¡Copiado! Pégalo donde quieras para compartir.",copyFail:"Mantén pulsado el enlace de la barra de direcciones para copiarlo.",
@@ -494,7 +650,7 @@ fr:{
  who:"Qui tu es",loveLbl:"Ton style amoureux",workLbl:"Ton énergie professionnelle",
  matchTitle:"Vérifie votre compatibilité",partnerLabel:"Date de naissance de ton/ta partenaire ou crush",matchBtn:"Voir la compatibilité",youL:"Toi",themL:"L'autre",
  lockTitle:"Ton Rapport de Destin complet",
- l1:"Thème complet à 8 caractères avec l'heure de naissance",l2:"Timing amoureux : quand arrivent tes meilleures chances",l3:"Cycles de carrière et d'argent",l4:"Prévisions pour 2027",l5:"Rapport de couple approfondi pour deux personnes",
+ l1:"Lecture détaillée de tes cycles de chance de 10 ans",l2:"Timing amoureux : quand arrivent tes meilleures chances",l3:"Cycles de carrière et d'argent",l4:"Prévisions pour 2027",l5:"Rapport de couple approfondi pour deux personnes",
  soon:"Rapport complet bientôt disponible",
  shareTitle:"Partage ton résultat",shareBtn:"Partager ma carte de destin",againBtn:"Lire une autre date de naissance",
  copied:"Copié ! Colle-le où tu veux pour partager.",copyFail:"Appuie longuement sur le lien dans la barre d'adresse pour le copier.",
@@ -562,6 +718,8 @@ function setLang(l){
   lang=l;
   try{localStorage.setItem("sajupia_lang",l);}catch(e){}
   applyStatic();
+  paintFormX();
+  paintApps();
   if(current) paintResult();
   if(lastMatch) paintMatch();
 }
@@ -572,6 +730,479 @@ function parseDate(v){
   const [y,m,d]=p;
   if(y<1900||y>2100) return null;
   return {y,m,d};
+}
+/* ===== REPORT CONTENT (ko / en) ===== */
+const RC={
+ko:{
+ ui:{deepTitle:n=>"🔮 "+(n?n+"님의 ":"")+"마음 깊이 읽기",
+  s0:"사주 여덟 글자",s1:"마음 거울",s2:"오행 레이더",s3:"감정의 뇌 vs 이성의 뇌",s4:"인생 운 곡선",s5:"나이별 과거·현재·미래",s6:"전생 영화",
+  pil:["시주","일주","월주","연주"],noHour:"시간 모름",ageNow:(a,b)=>"지금 "+a+"세 · "+b,
+  pastL:"과거",nowL:"현재",futL:"미래",you:"지금",peak:"전성기",ageU:"세",
+  emoL:"감정의 뇌",reaL:"이성의 뇌",
+  open:n=>n?n+"님, 당신의 마음을 읽었습니다.":"당신의 마음을 읽었습니다.",
+  movieTag:"재미로 보는 전생 이야기",
+  ctaTitle:"🛡️ 부족한 기운을 채우고 액운을 막는 두 가지",
+  ctaText:w=>"당신의 가장 약한 기운은 "+w+"입니다. 이 기운을 채워주는 수호 아이템을 준비했습니다.",
+  talis:"부적 카드",talisD:"전통 부적 디자인 · 부족한 기운 보강 · 흉액 수호",
+  doll:"걱정인형",dollD:"가슴에 내 이름표 · 걱정과 악몽을 덜어주는 숙면 친구",
+  set:"부적 + 걱정인형 세트",setD:"가장 든든한 수호 조합 · 함께 담으면 더 강력",soon:"",
+  fb:""},
+ stem:["겉으로는 늘 단단해 보이지만, 속으로는 '나는 제대로 크고 있나' 하고 밤마다 자신을 시험합니다. 부러질지언정 굽히기 싫어서 혼자 삼킨 말이 많았습니다.",
+  "부드럽게 웃으며 맞춰주는 사람이지만, 사실 가장 많이 참은 사람도 당신입니다. 말하지 못한 서운함이 마음속 화분에 조용히 쌓여 있습니다.",
+  "어디서나 분위기를 밝히는 태양 같지만, 혼자 남는 순간 갑자기 허전해집니다. 모두를 비추느라 정작 자신은 아무도 비춰주지 않았다고 느낀 날이 있었죠.",
+  "작은 불빛처럼 따뜻하고 섬세해서 남의 기분을 먼저 읽습니다. 그 섬세함 때문에 남들은 지나칠 말 한마디를 며칠씩 곱씹곤 합니다.",
+  "산처럼 든든해서 모두가 기대지만, 정작 당신이 기댈 곳은 없었습니다. '괜찮아'라는 말을 너무 자주 해서 진짜 괜찮은지 스스로도 모르게 됐습니다.",
+  "받아주고 품어주는 땅 같은 사람입니다. 하지만 남의 걱정을 대신 짊어지다 지쳐, 속으로 '나는 누가 챙겨주나' 하고 물은 적이 있을 겁니다.",
+  "한번 정하면 끝까지 가는 강철 같은 의지가 있습니다. 그러나 그 단호함 뒤에는 상처받기 전에 먼저 선을 긋는 버릇이 숨어 있습니다.",
+  "보석처럼 빛나지만 흠집 하나에 마음이 크게 흔들립니다. 완벽해 보이려 애쓰는 만큼, 아무도 모르는 불안도 큽니다.",
+  "바다처럼 깊고 자유로운 영혼입니다. 마음속에는 아무에게도 보여주지 않은 큰 파도가 있고, 그 깊이를 이해받고 싶다는 갈망이 있습니다.",
+  "이슬비처럼 조용히 스며드는 직감의 소유자입니다. 말하지 않아도 느끼고, 느낀 만큼 혼자 앓는 밤이 많았습니다."],
+ dom:["가장 강한 기운은 목(木)입니다. 성장하고 싶은 욕구가 커서, 멈춰 있는 시간이 가장 괴롭습니다.",
+  "가장 강한 기운은 화(火)입니다. 감정이 빠르고 뜨거워서, 기쁨도 서운함도 남들보다 두 배로 느낍니다.",
+  "가장 강한 기운은 토(土)입니다. 책임감이 무거워서 쉬는 것조차 죄책감이 듭니다.",
+  "가장 강한 기운은 금(金)입니다. 옳고 그름이 선명해서 어정쩡한 관계에 쉽게 지칩니다.",
+  "가장 강한 기운은 수(水)입니다. 생각이 깊어서 밤이 되면 머릿속에 혼자만의 영화관이 열립니다."],
+ weak:["가장 약한 기운은 목(木)입니다. 시작해야 할 때 한 발 늦게 망설이곤 했습니다. 작은 시작 하나가 운을 엽니다.",
+  "가장 약한 기운은 화(火)입니다. 마음을 겉으로 표현하는 일이 서툴러 오해를 받기도 했습니다. 먼저 건네는 따뜻한 한마디가 복을 부릅니다.",
+  "가장 약한 기운은 토(土)입니다. 마음이 붙을 곳이 흔들려 불안이 잦습니다. 일정한 일상과 편안한 잠자리가 약이 됩니다.",
+  "가장 약한 기운은 금(金)입니다. 끊어야 할 때 끊지 못해 마음이 새곤 했습니다. 'NO'라고 말하는 연습이 운을 지켜줍니다.",
+  "가장 약한 기운은 수(水)입니다. 마음을 식히고 쉬는 힘이 약해 잠이 얕기 쉽습니다. 밤의 고요함과 따뜻한 물이 보약입니다."],
+ elw:["목(木)","화(火)","토(土)","금(金)","수(水)"],
+ emo:["감정의 뇌가 더 크게 깨어 있습니다. 직감과 공감으로 움직이고, 한번 마음이 열리면 깊이 빠져듭니다. 마음이 곧 나침반입니다.",
+  "감정과 이성의 균형이 좋습니다. 가슴으로 느끼고 머리로 정리하는 힘이 있어, 위기에 침착하게 방향을 잡습니다.",
+  "이성의 뇌가 더 크게 깨어 있습니다. 차분히 따져보고 움직이지만, 정작 속마음은 표현하지 못해 혼자 쌓아두기 쉽습니다."],
+ band:["지금은 마음의 뿌리를 내리는 시기입니다.","지금은 나를 찾느라 가장 예민하고 반짝이는 시기입니다.","지금은 세상에 내 자리를 만들며 흔들리고 단단해지는 시기입니다.","지금은 책임과 꿈 사이에서 방향을 다시 잡는 시기입니다.","지금은 지나온 길의 열매를 거두고 남은 길을 고르는 시기입니다.","지금은 쌓은 지혜로 마음의 평화를 가꾸는 시기입니다."],
+ birthPast:"태어날 때 품고 온 기질이 아직 껍질 속에서 자라던 때입니다.",
+ past:["경쟁과 비교 속에서 나를 지키려 버텨온 시기였습니다.","재능과 표현이 터져 나오던, 자유롭지만 흔들리던 시기였습니다.","현실을 배우고 돈과 인연의 맛을 일찍 본 시기였습니다.","책임과 압박, 눈치 속에서 단단해진 시기였습니다.","누군가의 보살핌과 배움 속에서 마음이 자란 시기였습니다."],
+ now:["나를 믿어줄 동료와 내 힘이 함께 커지는 때입니다. 독립과 협력의 갈림길에 있습니다.","말과 글, 아이디어가 돈이 되는 때입니다. 숨기지 말고 드러내십시오.","기회와 결실이 손에 잡히는 때입니다. 욕심만 덜면 크게 얻습니다.","시험과 규칙이 몰려오는 때입니다. 버티면 이름이 남습니다.","배움과 귀인, 쉼이 힘이 되는 때입니다. 멈춰서 채우십시오."],
+ fut:["곧 함께 가는 사람이 운을 좌우합니다. 모임과 동업에서 좋은 인연이 열립니다.","표현하고 만드는 일이 새 문을 엽니다. 지금부터 작게라도 보여주십시오.","수입과 인연이 눈에 띄게 늘어나는 흐름이 옵니다.","역할은 무거워지지만 그만큼 지위와 신뢰가 쌓입니다.","귀인과 안정이 찾아와 마음이 한결 편해집니다."],
+ tail:"순풍 구간입니다. 마음껏 밀고 나가십시오.",head:"역풍 구간입니다. 서두르지 말고 준비하며 버티십시오.",
+ set:["달빛 아래 고요한 북쪽 포구 마을","곡식이 황금빛으로 출렁이는 남쪽 들판 마을","호랑이가 산다는 깊은 산골 성채","복사꽃이 흐드러진 강가 마을","용이 승천했다는 전설의 호숫가 도성","비단과 향료가 오가던 골목 시장 도시","붉은 말이 달리던 서쪽 초원의 천막 마을","양떼와 종소리가 울리던 고원 수도원 마을","원숭이 장터가 열리던 산 너머 교역 도시","새벽 종이 울리던 성곽 마을","충직한 개가 지키던 국경의 봉화대 마을","바다 안개 자욱한 남쪽 섬의 어촌"],
+ role:["마을을 지키던 젊은 장군","약초를 키우던 비밀 정원사","횃불을 든 떠돌이 시인 왕자","등불로 길을 밝히던 점등사","성문을 지키던 든든한 성주","굶는 이를 먹이던 곡식 창고지기","명검을 벼리던 대장장이 검객","왕관의 보석을 세공하던 장인","바다를 건너던 항해가 상인","비를 부른다는 신비한 점술가"],
+ sc:["프롤로그","재능","상처","이별","이번 생으로 이어진 약속"],
+ title:(s,r)=>"《"+s+"의 "+r+"》",
+ scene1:(s,r)=>"당신은 "+s+"에서 "+r+"로 살았습니다. 사람들은 당신의 이름을 부를 때마다 목소리를 낮췄습니다.",
+ gift:["당신은 사람을 자라게 하는 재주로 유명했습니다. 당신 곁에 앉으면 시든 마음도 싹을 틔웠습니다.","당신의 열정은 마을 전체를 밝혔습니다. 축제의 불은 언제나 당신의 웃음에서 시작됐습니다.","당신은 모두가 기댄 기둥이었습니다. 폭풍이 와도 당신 곁이 가장 안전한 곳이었습니다.","당신의 판단은 칼처럼 정확했습니다. 분쟁이 생기면 사람들은 당신 앞에 줄을 섰습니다.","당신은 사람의 마음속을 헤아렸습니다. 말하지 않아도 슬픔을 알아보는 사람이었습니다."],
+ wound:["그러나 정작 당신은 첫걸음을 내딛지 못한 꿈을 가슴에 묻고 살았습니다.","그러나 뜨거운 마음을 끝내 말하지 못했고, 그 침묵이 평생의 후회로 남았습니다.","그러나 모두를 품느라 정작 당신의 자리는 어디에도 없었습니다.","그러나 끊어내지 못한 인연 하나가 오래도록 당신을 아프게 했습니다.","그러나 밤마다 파도 같은 생각에 잠을 이루지 못했습니다."],
+ part:["당신은 끝까지 맞서 싸웠고, 그 용기는 노래가 되어 남았습니다.","당신은 사람들을 먼저 안전하게 보낸 뒤, 조용히 마지막 불을 껐습니다."],
+ vow:["마지막 순간 당신은 다짐했습니다. 다음 생에는 망설이지 않고 먼저 시작하겠다고.","마지막 순간 당신은 다짐했습니다. 다음 생에는 마음을 아끼지 않고 먼저 전하겠다고.","마지막 순간 당신은 다짐했습니다. 다음 생에는 나 자신도 쉴 자리를 만들겠다고.","마지막 순간 당신은 다짐했습니다. 다음 생에는 아닌 것에 아니라고 말하겠다고.","마지막 순간 당신은 다짐했습니다. 다음 생에는 깊은 잠을 푹 자겠다고."],
+ end:"그 약속을 기억하는 영혼이 바로 지금의 당신입니다. 이번 생의 이야기는 지금도 쓰이고 있습니다."
+},
+en:{
+ ui:{deepTitle:n=>"🔮 "+(n?n+"'s ":"Your ")+"Deep Reading",
+  s0:"Your Eight Characters",s1:"Heart Mirror",s2:"Five-Element Radar",s3:"Emotional Brain vs Rational Brain",s4:"Life Luck Curve",s5:"Past · Present · Future by Age",s6:"Past-Life Movie",
+  pil:["Hour","Day","Month","Year"],noHour:"time unknown",ageNow:(a,b)=>"Now age "+a+" · "+b,
+  pastL:"Past",nowL:"Present",futL:"Future",you:"YOU",peak:"Peak",ageU:"",
+  emoL:"Emotional brain",reaL:"Rational brain",
+  open:n=>n?n+", we read your heart.":"We read your heart.",
+  movieTag:"A past-life story, just for fun",
+  ctaTitle:"🛡️ Two ways to fill what is missing and ward off bad luck",
+  ctaText:w=>"Your weakest energy is "+w+". We prepared guardian items to strengthen it.",
+  talis:"Talisman Card",talisD:"Traditional talisman design · fills your weak element · guards against misfortune",
+  doll:"Worry Doll",dollD:"Your name on its chest · takes your worries and nightmares, brings deep sleep",
+  set:"Talisman + Worry Doll Set",setD:"The strongest guardian pair · stronger together",soon:"",
+  fb:"Full deep reports are live in English and Korean. Your language is coming soon."},
+ stem:["You look solid on the outside, but at night you quietly test yourself: am I really growing? You would rather break than bend, so you swallowed many words alone.",
+  "You smile softly and adapt to everyone, yet you are the one who has endured the most. Unspoken hurt sits quietly in a flowerpot inside your heart.",
+  "You light up every room like the sun, yet when you are alone the emptiness hits. You were so busy shining on others that no one shined on you.",
+  "You are warm and delicate like a small flame, reading everyone's mood first. That same sensitivity makes you replay one small remark for days.",
+  "Steady as a mountain, everyone leans on you, but you had no one to lean on. You said 'I'm fine' so often that you stopped knowing if it was true.",
+  "You are the earth that accepts and embraces. But carrying other people's worries has worn you out, and you have wondered silently: who takes care of me?",
+  "Once you decide, you go to the end with steel will. Behind that firmness is a habit of drawing the line first, before anyone can hurt you.",
+  "You shine like a jewel, yet one scratch shakes you deeply. The harder you try to look perfect, the bigger the anxiety nobody sees.",
+  "You are a deep, free soul like the ocean. Inside is a great wave you never showed anyone, and a longing to be understood at that depth.",
+  "You have a quiet intuition that seeps in like drizzle. You feel what is unsaid, and you spent many nights aching alone because of it."],
+ dom:["Your strongest energy is Wood. You crave growth, so standing still is what hurts you most.",
+  "Your strongest energy is Fire. Your feelings are fast and hot, so joy and hurt both hit you twice as hard.",
+  "Your strongest energy is Earth. Your sense of duty is heavy, so even resting feels guilty.",
+  "Your strongest energy is Metal. You see right and wrong sharply, so half-hearted relationships drain you.",
+  "Your strongest energy is Water. You think deeply, so at night a private movie theater opens in your head."],
+ weak:["Your weakest energy is Wood. When it is time to begin, you hesitate a step too long. One small start opens your luck.",
+  "Your weakest energy is Fire. Showing your heart outwardly is hard, and people have misread you. One warm word offered first calls fortune in.",
+  "Your weakest energy is Earth. Your inner ground wobbles, so anxiety comes often. A steady routine and a comfortable bed are your medicine.",
+  "Your weakest energy is Metal. When you needed to cut ties you could not, and your energy leaked. Practicing the word NO guards your luck.",
+  "Your weakest energy is Water. Your power to cool down and rest is weak, so sleep comes shallow. Night silence and warm water are your tonic."],
+ elw:["Wood","Fire","Earth","Metal","Water"],
+ emo:["Your emotional brain is more awake. You move by intuition and empathy, and once your heart opens you fall deep. Your heart is your compass.",
+  "Your emotion and reason are well balanced. You feel with the heart and sort with the head, so you stay calm and find direction in a crisis.",
+  "Your rational brain is more awake. You weigh things calmly before moving, but your true feelings tend to pile up unspoken."],
+ band:["Now is the time of putting down roots in your heart.","Now is the most sensitive and sparkling time of finding yourself.","Now is the time of carving out your place in the world, shaken and hardened by it.","Now is the time of re-aiming between duty and dreams.","Now is the time of harvesting the road behind you and choosing the road ahead.","Now is the time of tending peace of mind with the wisdom you gathered."],
+ birthPast:"This was when the nature you were born with was still growing inside its shell.",
+ past:["A time you endured, protecting yourself amid competition and comparison.","A free but unsteady time when your talent and voice burst out.","A time you learned reality early and tasted money and love.","A time you hardened under duty, pressure and watchful eyes.","A time your heart grew through someone's care and learning."],
+ now:["Allies who believe in you and your own strength grow together now. You stand at a crossroads of independence and cooperation.","Your words, writing and ideas can turn into money now. Do not hide them; show them.","Chances and results are within reach now. Cut the greed and you gain big.","Tests and rules arrive all at once now. If you hold on, your name will remain.","Learning, benefactors and rest become your power now. Pause and refill."],
+ fut:["Soon the people who walk with you decide your luck. Good bonds open in groups and partnerships.","Expressing and making will open a new door. Start showing, even small, from now.","A flow is coming where income and connections visibly grow.","Your role gets heavier, but status and trust grow with it.","A benefactor and stability arrive, and your heart eases."],
+ tail:"A tailwind stretch. Push forward freely.",head:"A headwind stretch. Do not rush; prepare and hold on.",
+ set:["a quiet northern harbor village under the moon","a southern farm village where grain rolls golden","a stone fortress deep in tiger mountains","a riverside village of peach blossoms","a lakeside capital where a dragon was said to rise","an alley-market city of silk and spice","a tent village on the western plains of red horses","a highland abbey village of sheep and bells","a trading city beyond the mountains with a monkey market","a walled town where the dawn bell rang","a border beacon village guarded by loyal dogs","a fishing village on a foggy southern island"],
+ role:["a young general guarding the village","a secret gardener of healing herbs","a wandering poet prince with a torch","a lamplighter who lit the roads","a steadfast lord of the city gate","a granary keeper who fed the hungry","a blacksmith swordsman forging famous blades","a master jeweler of crown stones","a sea-crossing merchant navigator","a mysterious seer said to call rain"],
+ sc:["Prologue","Gift","Wound","Parting","The Promise Carried Into This Life"],
+ title:(s,r)=>"The Tale of "+r,
+ scene1:(s,r)=>"You lived as "+r+" in "+s+". People lowered their voices whenever they spoke your name.",
+ gift:["You were famed for helping people grow. Sit beside you and even a withered heart sprouted.","Your passion lit the whole village. Every festival fire began with your laugh.","You were the pillar everyone leaned on. Even in storms, beside you was the safest place.","Your judgment was sharp as a blade. In disputes, people lined up before you.","You sensed what lay in hearts. You recognized sorrow before a word was spoken."],
+ wound:["Yet you buried a dream whose first step you never took.","Yet you never spoke your burning feeling, and that silence became a lifelong regret.","Yet you held everyone, and there was no place left for you.","Yet one bond you could not cut hurt you for a long time.","Yet every night, wave-like thoughts kept you from sleep."],
+ part:["You fought to the end, and your courage lived on as a song.","You sent everyone to safety first, then quietly put out the last light."],
+ vow:["At the very end you vowed: next life, I will begin first, without hesitation.","At the very end you vowed: next life, I will not hold back my heart; I will say it first.","At the very end you vowed: next life, I will make a place to rest for myself too.","At the very end you vowed: next life, I will say no to what is not right.","At the very end you vowed: next life, I will sleep deeply and well."],
+ end:"The soul that remembers that promise is you, right now. This life's story is still being written."
+}};
+/* ===== END CONTENT ===== */
+
+/* ===== REPORT RENDER ===== */
+const FX={
+ en:{time:"Birth time (optional)",tu:"I don't know",gen:"Gender (for life-luck direction)",gs:"Prefer not to say",gf:"Female",gm:"Male"},
+ ko:{time:"태어난 시간 (선택)",tu:"모릅니다",gen:"성별 (대운 방향 계산용)",gs:"선택 안 함",gf:"여성",gm:"남성"},
+ ja:{time:"生まれた時間(任意)",tu:"わかりません",gen:"性別(大運の方向の計算用)",gs:"選択しない",gf:"女性",gm:"男性"},
+ zh:{time:"出生時間(選填)",tu:"不知道",gen:"性別(用於計算大運方向)",gs:"不選擇",gf:"女性",gm:"男性"},
+ es:{time:"Hora de nacimiento (opcional)",tu:"No la sé",gen:"Género (para la dirección de la suerte)",gs:"Prefiero no decirlo",gf:"Mujer",gm:"Hombre"},
+ fr:{time:"Heure de naissance (facultatif)",tu:"Je ne sais pas",gen:"Genre (pour le sens de la chance)",gs:"Je préfère ne pas dire",gf:"Femme",gm:"Homme"}
+};
+function paintFormX(){
+  const f=FX[lang]||FX.en;
+  $("lblTime").textContent=f.time; $("lblGen").textContent=f.gen;
+  const tv=$("tm").value, gv=$("gn").value;
+  let o='<option value="-1">'+f.tu+'</option>';
+  for(let k=0;k<12;k++){
+    const s=((2*k-1)*60+30+1440)%1440, e=(s+120)%1440;
+    const hh=x=>String(Math.floor(x/60)).padStart(2,"0")+":"+String(x%60).padStart(2,"0");
+    o+='<option value="'+((2*k)%24)+'">'+BR_META[k].h+'  '+hh(s)+" – "+hh(e)+'</option>';
+  }
+  $("tm").innerHTML=o; $("tm").value=tv||"-1";
+  $("gn").innerHTML='<option value="s">'+f.gs+'</option><option value="f">'+f.gf+'</option><option value="m">'+f.gm+'</option>';
+  $("gn").value=gv||"s";
+}
+const RCL=()=>RC[lang]||RC.en;
+const elHan=["木","火","土","金","水"];
+function svgRadar(A,t){
+  const cx=180,cy=150,R=92,N=5, mx=Math.max(3,...A.cnt);
+  const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/N;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];};
+  let s='<svg viewBox="0 0 360 310" width="100%" role="img" aria-label="radar">';
+  [0.25,0.5,0.75,1].forEach(f=>{
+    s+='<polygon points="'+[0,1,2,3,4].map(i=>pt(i,R*f).join(",")).join(" ")+'" fill="'+(f===1?"#FEF3C7":"none")+'" stroke="#111" stroke-width="'+(f===1?3:1.5)+'"/>';
+  });
+  for(let i=0;i<N;i++){const p=pt(i,R);s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0]+'" y2="'+p[1]+'" stroke="#111" stroke-width="1.5"/>';}
+  const dc=EL_COLOR[A.dom];
+  s+='<polygon points="'+A.cnt.map((v,i)=>pt(i,R*v/mx).join(",")).join(" ")+'" fill="'+dc+'" fill-opacity="0.38" stroke="'+dc+'" stroke-width="5" stroke-linejoin="round"/>';
+  A.cnt.forEach((v,i)=>{
+    const p=pt(i,R*v/mx); s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="7" fill="'+EL_COLOR[i]+'" stroke="#fff" stroke-width="2.5"/>';
+    const q=pt(i,R+34);
+    s+='<text x="'+q[0]+'" y="'+(q[1]-2)+'" text-anchor="middle" font-size="26" font-weight="900" fill="'+EL_COLOR[i]+'">'+elHan[i]+'</text>';
+    s+='<text x="'+q[0]+'" y="'+(q[1]+19)+'" text-anchor="middle" font-size="15" font-weight="900" fill="'+EL_COLOR[i]+'">'+t.el[i]+' '+v+'</text>';
+  });
+  return s+'</svg>';
+}
+function svgGauge(A,R){
+  const p=A.emoPct, w=330, x0=15, ew=Math.round(w*p/100);
+  let s='<svg viewBox="0 0 360 124" width="100%" role="img" aria-label="gauge">';
+  s+='<rect x="'+x0+'" y="20" width="'+w+'" height="34" rx="17" fill="#1D4ED8" stroke="#111" stroke-width="3"/>';
+  if(ew>0) s+='<rect x="'+x0+'" y="20" width="'+Math.max(ew,34)+'" height="34" rx="17" fill="#DB2777" stroke="#111" stroke-width="3"/>';
+  const mx=x0+Math.max(ew,17);
+  s+='<circle cx="'+mx+'" cy="37" r="14" fill="#FACC15" stroke="#111" stroke-width="3.5"/>';
+  s+='<text x="15" y="86" font-size="18" font-weight="900" fill="#BE185D">💗 '+R.ui.emoL+' '+p+'%</text>';
+  s+='<text x="345" y="112" text-anchor="end" font-size="18" font-weight="900" fill="#1D4ED8">'+R.ui.reaL+' '+(100-p)+'% 🧠</text>';
+  return s+'</svg>';
+}
+function svgCurve(D,age,R){
+  const pts=D.per.filter(p=>p.from<=76).map(p=>[(p.from+Math.min(p.to,p.from+9))/2, p.score]);
+  pts.unshift([0,D.per[0].score]);
+  const X=a=>30+(a/80)*310, Y=s=>205-(s-20)*1.75;
+  const P=pts.map(p=>[X(p[0]),Y(p[1])]);
+  let d="M"+P[0][0]+","+P[0][1];
+  for(let i=0;i<P.length-1;i++){
+    const p0=P[Math.max(0,i-1)],p1=P[i],p2=P[i+1],p3=P[Math.min(P.length-1,i+2)];
+    const c1=[p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6], c2=[p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6];
+    d+=" C"+c1.join(",")+" "+c2.join(",")+" "+p2.join(",");
+  }
+  const lin=a=>{ for(let i=0;i<pts.length-1;i++){ if(a<=pts[i+1][0]){ const f=(a-pts[i][0])/(pts[i+1][0]-pts[i][0]||1); return pts[i][1]+(pts[i+1][1]-pts[i][1])*f; } } return pts[pts.length-1][1]; };
+  const ax=X(Math.min(age,80)), ay=Y(lin(Math.min(age,80)));
+  let best=pts[0]; pts.forEach(p=>{ if(p[1]>best[1]) best=p; });
+  const bx=X(best[0]), by=Y(best[1]);
+  let s='<svg viewBox="0 0 360 260" width="100%" role="img" aria-label="life curve">';
+  s+='<defs><linearGradient id="lcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DB2777" stop-opacity=".55"/><stop offset="1" stop-color="#DB2777" stop-opacity=".05"/></linearGradient>';
+  s+='<clipPath id="lcp"><rect x="0" y="0" width="'+ax+'" height="260"/></clipPath><clipPath id="lcf"><rect x="'+ax+'" y="0" width="'+(360-ax)+'" height="260"/></clipPath></defs>';
+  [30,50,70,90].forEach(v=>{ s+='<line x1="30" y1="'+Y(v)+'" x2="340" y2="'+Y(v)+'" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="4 5"/><text x="26" y="'+(Y(v)+5)+'" text-anchor="end" font-size="13" font-weight="900" fill="#111">'+v+'</text>'; });
+  s+='<path d="'+d+' L'+P[P.length-1][0]+',215 L'+P[0][0]+',215 Z" fill="url(#lcg)"/>';
+  s+='<path d="'+d+'" fill="none" stroke="#DB2777" stroke-width="6" stroke-linecap="round" clip-path="url(#lcp)"/>';
+  s+='<path d="'+d+'" fill="none" stroke="#7C3AED" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 10" clip-path="url(#lcf)"/>';
+  [0,20,40,60,80].forEach(a=>{ s+='<text x="'+X(a)+'" y="240" text-anchor="middle" font-size="15" font-weight="900" fill="#111">'+a+R.ui.ageU+'</text>'; });
+  s+='<line x1="'+ax+'" y1="'+(ay-8)+'" x2="'+ax+'" y2="215" stroke="#111" stroke-width="3"/>';
+  s+='<circle cx="'+ax+'" cy="'+ay+'" r="10" fill="#FACC15" stroke="#111" stroke-width="4"/>';
+  const lx=Math.min(Math.max(ax,40),320);
+  s+='<rect x="'+(lx-30)+'" y="'+(ay-44)+'" width="60" height="26" rx="13" fill="#111"/><text x="'+lx+'" y="'+(ay-26)+'" text-anchor="middle" font-size="15" font-weight="900" fill="#FACC15">'+R.ui.you+' '+age+'</text>';
+  if(Math.abs(bx-ax)>40){ s+='<text x="'+bx+'" y="'+(by-12)+'" text-anchor="middle" font-size="24" fill="#D97706" stroke="#111" stroke-width="1">★</text><text x="'+bx+'" y="'+(by-34)+'" text-anchor="middle" font-size="14" font-weight="900" fill="#D97706">'+R.ui.peak+' '+Math.round(best[0])+R.ui.ageU+'</text>'; }
+  return s+'</svg>';
+}
+function pillarCell(label,st,br,hl){
+  const has=st!==null;
+  const sc=has?EL_COLOR[STEM_META[st].e]:"#6B7280", bc=has?EL_COLOR[BR_META[br].e]:"#6B7280";
+  return '<div class="pc'+(hl?' hl':'')+'"><i>'+label+'</i><b style="color:'+sc+'">'+(has?STEM_META[st].h:"?")+'</b><b style="color:'+bc+'">'+(has?BR_META[br].h:"?")+'</b></div>';
+}
+function buildReport(){
+  const R=RCL(), t=T(), c=current, C=c.C, A=c.A, D=c.D, age=c.age, nm=c.nm;
+  const ci=curIndex(D,age), cur=D.per[ci];
+  const pi=ci>0?D.per[ci-1]:null, fi=Math.min(D.per.length-1,ci+1), fut=D.per[fi];
+  const band=age<13?0:age<20?1:age<30?2:age<40?3:age<55?4:5;
+  const pl=(p)=>STEM_META[p.stem].h+BR_META[p.branch].h+" · "+p.from+"–"+p.to+R.ui.ageU;
+  const emoTier=A.emoPct>=60?0:A.emoPct<=40?2:1;
+  const parting=R.part[A.strong?0:1];
+  const sIdx=C.yearBranch, rIdx=C.dayStem;
+  let h='';
+  if(R.ui.fb) h+='<div class="tip">'+R.ui.fb+'</div>';
+  h+='<div class="dp-sec"><div class="dp-h" style="background:#7C3AED">'+R.ui.s0+'</div><div class="pcs">'+
+    pillarCell(R.ui.pil[0]+(C.hasHour?"":" ("+R.ui.noHour+")"),C.hasHour?C.hourStem:null,C.hourBranch,0)+
+    pillarCell(R.ui.pil[1],C.dayStem,C.dayBranch,1)+pillarCell(R.ui.pil[2],C.monthStem,C.monthBranch,0)+pillarCell(R.ui.pil[3],C.yearStem,C.yearBranch,0)+'</div></div>';
+  h+='<div class="dp-sec"><div class="dp-h" style="background:#DB2777">'+R.ui.s1+'</div><div class="dp-q">'+R.ui.open(nm)+'</div>'+
+    '<p class="dp-p">'+R.stem[C.dayStem]+'</p><p class="dp-p">'+R.dom[A.dom]+'</p><p class="dp-p">'+R.weak[A.weak]+'</p></div>';
+  h+='<div class="dp-sec"><div class="dp-h" style="background:#15803D">'+R.ui.s2+'</div>'+svgRadar(A,t)+'</div>';
+  h+='<div class="dp-sec"><div class="dp-h" style="background:#1D4ED8">'+R.ui.s3+'</div>'+svgGauge(A,R)+'<p class="dp-p">'+R.emo[emoTier]+'</p></div>';
+  h+='<div class="dp-sec"><div class="dp-h" style="background:#D97706">'+R.ui.s4+'</div>'+svgCurve(D,age,R)+'</div>';
+  h+='<div class="dp-sec"><div class="dp-h" style="background:#DC2626">'+R.ui.s5+'</div><div class="dp-q">'+R.ui.ageNow(age,R.band[band])+'</div>'+
+    '<div class="tl tl-p"><b>'+R.ui.pastL+(pi?' · '+pl(pi):'')+'</b><span>'+(pi?R.past[pi.rel]:R.birthPast)+'</span></div>'+
+    '<div class="tl tl-n"><b>'+R.ui.nowL+' · '+pl(cur)+'</b><span>'+R.now[cur.rel]+' '+(cur.fav?R.tail:R.head)+'</span></div>'+
+    '<div class="tl tl-f"><b>'+R.ui.futL+' · '+pl(fut)+'</b><span>'+R.fut[fut.rel]+' '+(fut.fav?R.tail:R.head)+'</span></div></div>';
+  h+='<div class="dp-sec"><div class="dp-h" style="background:#111">'+R.ui.s6+'</div><div class="movie"><div class="mtag">🎬 '+R.ui.movieTag+'</div>'+
+    '<div class="mtitle">'+R.title(R.set[sIdx],R.role[rIdx])+'</div>'+
+    '<div class="sc"><b>1 · '+R.sc[0]+'</b><span>'+R.scene1(R.set[sIdx],R.role[rIdx])+'</span></div>'+
+    '<div class="sc"><b>2 · '+R.sc[1]+'</b><span>'+R.gift[A.dom]+'</span></div>'+
+    '<div class="sc"><b>3 · '+R.sc[2]+'</b><span>'+R.wound[A.weak]+'</span></div>'+
+    '<div class="sc"><b>4 · '+R.sc[3]+'</b><span>'+parting+'</span></div>'+
+    '<div class="sc"><b>5 · '+R.sc[4]+'</b><span>'+R.vow[A.weak]+' '+R.end+'</span></div></div></div>';
+  h+='<div class="cta"><h3>'+R.ui.ctaTitle+'</h3><p>'+R.ui.ctaText('<span class="nowrap">'+R.elw[A.weak]+'</span>')+'</p>'+
+    '<button class="act cta-b" id="ctaT" type="button"><span class="nowrap">🧧 '+R.ui.talis+'</span><small>'+R.ui.talisD+'</small></button>'+
+    '<button class="act cta-b cta-d" id="ctaD" type="button"><span class="nowrap">🧸 '+R.ui.doll+'</span><small>'+R.ui.dollD+'</small></button>'+
+    '<button class="act cta-b cta-s" id="ctaS" type="button"><span class="nowrap">🎁 '+R.ui.set+'</span><small>'+R.ui.setD+'</small></button>'+
+    '<div id="dollBox" class="hidden"></div></div>';
+  return h;
+}
+function paintDeep(){
+  const R=RCL();
+  $("deepTitle").textContent=R.ui.deepTitle(current.nm);
+  $("deepBody").innerHTML=buildReport();
+  $("ctaT").addEventListener("click",()=>showProd("t")); $("ctaD").addEventListener("click",()=>showProd("d")); $("ctaS").addEventListener("click",()=>showProd("s"));
+}
+/* ===== END REPORT ===== */
+
+
+let DOLL_LOCKED=true, TALIS_LOCKED=true, ADMIN=false;
+const ADMIN_HASH="5fc6e599da79b31fcad03ecfd11df3b6ece1852bded480f58d30f4317c6b9e69";
+async function sha(t){ const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t)); return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,"0")).join(""); }
+function setAdmin(on){ ADMIN=on; DOLL_LOCKED=!on; TALIS_LOCKED=!on; }
+(async function adminInit(){
+  try{
+    const u=new URL(location.href), q=u.searchParams.get("admin");
+    if(q==="off"){ localStorage.removeItem("sajupia_admin"); }
+    else if(q && crypto.subtle && (await sha(q))===ADMIN_HASH){ localStorage.setItem("sajupia_admin",ADMIN_HASH); }
+    if(q){ u.searchParams.delete("admin"); history.replaceState(null,"",u.toString()); }
+    setAdmin(localStorage.getItem("sajupia_admin")===ADMIN_HASH);
+  }catch(e){}
+})();
+const DOLLS={M1:[261,521,443,594],M2:[221,524,414,599],M3:[264,519,445,591],M4:[217,529,430,610],F1:[278,532,469,605],F2:[252,533,440,605],F3:[218,539,396,611],F4:[232,536,414,607]};
+const DX={
+ en:{dt:n=>(n?n+"'s":"Your")+" Worry Doll",ds:"Your doll was picked at random. Tell it your worries tonight, then sleep deeply.",db:"Save my doll",
+  tt:n=>(n?n+"'s":"Your")+" Talisman",ts:w=>"A guardian talisman that fills your weak element, "+w+", and wards off misfortune.",tb:"Save my talisman",
+  st:"Talisman + Worry Doll Set",lock:"🔒 Saving opens with purchase. Payment is being prepared."},
+ ko:{dt:n=>(n?n+"님의 ":"나의 ")+"걱정인형",ds:"무작위로 뽑힌 당신의 인형입니다. 오늘 밤 걱정을 말해 주고 푹 주무세요.",db:"내 인형 저장하기",
+  tt:n=>(n?n+"님의 ":"나의 ")+"수호 부적",ts:w=>"부족한 "+w+" 기운을 채우고 흉액을 막아 주는 수호 부적입니다.",tb:"내 부적 저장하기",
+  st:"부적 + 걱정인형 세트",lock:"🔒 구매 후 저장할 수 있습니다. 결제 준비 중입니다."},
+ ja:{dt:n=>(n?n+"さんの":"あなたの")+"心配人形",ds:"ランダムで選ばれたあなたの人形です。今夜、悩みを話してぐっすり眠りましょう。",db:"人形を保存",
+  tt:n=>(n?n+"さんの":"あなたの")+"お守り札",ts:w=>"不足する"+w+"の気を補い、災いを防ぐお守り札です。",tb:"お札を保存",
+  st:"お札＋心配人形セット",lock:"🔒 保存は購入後に可能です。決済は準備中です。"},
+ zh:{dt:n=>(n?n+"的":"你的")+"煩惱娃娃",ds:"這是隨機選出的你的娃娃。今晚對它說出煩惱，然後安穩入睡。",db:"儲存我的娃娃",
+  tt:n=>(n?n+"的":"你的")+"守護符",ts:w=>"補足你欠缺的"+w+"氣，抵擋厄運的守護符。",tb:"儲存我的符",
+  st:"符＋煩惱娃娃套組",lock:"🔒 購買後即可儲存。付款功能準備中。"},
+ es:{dt:n=>"Muñeca quitapenas"+(n?" de "+n:""),ds:"Tu muñeca fue elegida al azar. Cuéntale tus penas esta noche y duerme profundo.",db:"Guardar mi muñeca",
+  tt:n=>"Talismán"+(n?" de "+n:""),ts:w=>"Un talismán guardián que completa tu elemento débil, "+w+", y aleja la mala suerte.",tb:"Guardar mi talismán",
+  st:"Set Talismán + Muñeca",lock:"🔒 Guardar se activa con la compra. El pago está en preparación."},
+ fr:{dt:n=>"Poupée à soucis"+(n?" de "+n:""),ds:"Ta poupée a été tirée au sort. Confie-lui tes soucis ce soir et dors profondément.",db:"Enregistrer ma poupée",
+  tt:n=>"Talisman"+(n?" de "+n:""),ts:w=>"Un talisman gardien qui comble ton élément faible, "+w+", et éloigne le malheur.",tb:"Enregistrer mon talisman",
+  st:"Set Talisman + Poupée",lock:"🔒 L'enregistrement s'ouvre avec l'achat. Le paiement est en préparation."}
+};
+let dollKey=null, dollImg=null;
+const dec=x=>(x||"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+function dollPick(){ const ks=Object.keys(DOLLS); return ks[Math.floor(Math.random()*ks.length)]; }
+function drawDoll(){
+  const key=dollKey, b=DOLLS[key];
+  const c=document.createElement("canvas"); c.width=640; c.height=960;
+  const g=c.getContext("2d"); g.drawImage(dollImg,0,0,640,960);
+  const txt=dec(current.nm)||"Sajupia", w=b[2]-b[0], h=b[3]-b[1];
+  let px=Math.floor(h*0.8);
+  do{ g.font="900 "+px+"px "+FF(); px-=2; }while(g.measureText(txt).width>w && px>12);
+  g.fillStyle="#111"; g.textAlign="center"; g.textBaseline="middle";
+  g.fillText(txt,(b[0]+b[2])/2,(b[1]+b[3])/2+2);
+  return c;
+}
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function drawTalis(){
+  const C=current.C, A=current.A, nm=dec(current.nm)||"Sajupia", W=A.weak;
+  let seed=C.dayStem*977+C.yearBranch*131+C.monthBranch*17+W*7; for(const ch of nm) seed=(seed*31+ch.charCodeAt(0))|0;
+  const r=rng(seed), rr=(a,b)=>a+(b-a)*r(), RED=["#B5121B","#C4161F","#A80F18","#CC1F26"];
+  const c=document.createElement("canvas"); c.width=640; c.height=960; const g=c.getContext("2d");
+  g.lineCap="round"; g.lineJoin="round";
+  /* paper */
+  const bg=g.createLinearGradient(0,0,640,960); bg.addColorStop(0,"#F3B80C"); bg.addColorStop(.5,"#F8C617"); bg.addColorStop(1,"#EFAE08");
+  g.fillStyle=bg; g.fillRect(0,0,640,960);
+  for(let i=0;i<1400;i++){ g.fillStyle="rgba("+(r()<.5?"150,90,0":"255,230,120")+","+rr(.03,.09)+")"; g.fillRect(r()*640,r()*960,rr(1,3),rr(1,3)); }
+  g.strokeStyle="rgba(150,90,0,.07)"; g.lineWidth=1;
+  for(let y=0;y<960;y+=6){ g.beginPath(); g.moveTo(0,y+r()*2); g.lineTo(640,y+r()*2); g.stroke(); }
+  /* brush primitives */
+  const col=()=>RED[Math.floor(r()*RED.length)];
+  function brush(pts,w0,w1,cl){
+    cl=cl||col(); g.fillStyle=cl;
+    const seg=[]; let L=0;
+    for(let i=0;i<pts.length-1;i++){ const d=Math.hypot(pts[i+1][0]-pts[i][0],pts[i+1][1]-pts[i][1]); seg.push(d); L+=d; }
+    if(L<1) return;
+    let acc=0;
+    for(let i=0;i<pts.length-1;i++){
+      const n=Math.max(1,Math.ceil(seg[i]/1.2));
+      for(let k=0;k<n;k++){
+        const f=k/n, t=(acc+seg[i]*f)/L, x=pts[i][0]+(pts[i+1][0]-pts[i][0])*f, y=pts[i][1]+(pts[i+1][1]-pts[i][1])*f;
+        const w=(w0+(w1-w0)*Math.pow(t,.85))*(1+Math.sin(t*9+seed)*.06);
+        g.beginPath(); g.arc(x,y,Math.max(.5,w/2),0,7); g.fill();
+      }
+      acc+=seg[i];
+    }
+  }
+  const wob=(x0,y0,x1,y1,w,seg)=>{ const n=seg||6,p=[]; const dx=x1-x0,dy=y1-y0,l=Math.hypot(dx,dy)||1,nx=-dy/l,ny=dx/l;
+    for(let i=0;i<=n;i++){ const t=i/n,o=(r()-.5)*3; p.push([x0+dx*t+nx*o,y0+dy*t+ny*o]); } brush(p,w,w*.8); };
+  const feather=(x,y,ang,len,cnt,w,spread)=>{ for(let i=0;i<cnt;i++){ const a=ang+(i-(cnt-1)/2)*spread, l=len*rr(.6,1), p=[];
+      for(let k=0;k<=6;k++){ const t=k/6; p.push([x+Math.cos(a)*l*t+Math.sin(a)*t*t*8*(r()-.3),y+Math.sin(a)*l*t]); } brush(p,w,.4); } };
+  const rect=(x,y,w,h,lw)=>{ wob(x,y,x+w,y+rr(-2,2),lw); wob(x+w,y,x+w+rr(-2,2),y+h,lw); wob(x+w,y+h,x,y+h+rr(-2,2),lw); wob(x,y+h,x+rr(-2,2),y,lw); };
+  const stack=(x,y,w,h,n,lw)=>{ const bh=h/n; for(let i=0;i<n;i++){ rect(x,y+i*bh,w,bh*.8,lw); if(r()<.7) wob(x+w*.2,y+i*bh+bh*.4,x+w*.8,y+i*bh+bh*.4,lw*.7); } };
+  const coil=(x,y,rad,lw)=>{ const p=[]; for(let a=0;a<12.5;a+=.35){ const q=rad*(1-a/14); p.push([x+Math.cos(a)*q,y+Math.sin(a)*q*.9]); } brush(p,lw,lw*.5); };
+  const hookv=(x,y,len,lw)=>{ const p=[]; for(let i=0;i<=8;i++) p.push([x+(r()-.5)*2,y+len*i/8]); brush(p,lw*1.2,lw*.7); const q=[]; for(let a=0;a<=1;a+=.15) q.push([x-Math.sin(a*2)*len*.18,y+len+Math.cos(a*2)*len*.05-a*8]); brush(q,lw*.7,.5); };
+  const dots=(x,y,n,lw)=>{ for(let i=0;i<n;i++){ const px=x+i*lw*2.4; brush([[px,y],[px+lw*.4,y+lw*1.6]],lw*1.1,lw*.5); } };
+  /* pseudo-glyph: random brush composition inside w x h box centered at x,y with rotation a */
+  function glyph(x,y,w,h,a,lw){
+    g.save(); g.translate(x,y); g.rotate(a||0); g.translate(-w/2,-h/2);
+    const mode=Math.floor(r()*5), X=0, Y=0;
+    if(mode===0){ stack(X+w*.15,Y+h*.25,w*.7,h*.75,3,lw); wob(X,Y+h*.12,X+w,Y+h*.12,lw*1.3); feather(X+w*.5,Y+h*.12,-Math.PI/2,h*.3,3,lw*.7,.5); }
+    else if(mode===1){ wob(X,Y+h*.1,X+w,Y+h*.1,lw*1.2); feather(X+w*.2,Y+h*.1,Math.PI/2,h*.8,4,lw*.8,.12); feather(X+w*.8,Y+h*.1,Math.PI/2,h*.8,4,lw*.8,.12); hookv(X+w*.5,Y+h*.15,h*.7,lw); }
+    else if(mode===2){ rect(X+w*.1,Y,w*.8,h*.45,lw); rect(X+w*.1,Y+h*.5,w*.8,h*.45,lw); wob(X+w*.1,Y+h*.47,X+w*.9,Y+h*.47,lw*.8); coil(X+w*.5,Y+h*.22,h*.12,lw*.7); dots(X+w*.25,Y+h*.72,3,lw*.8); }
+    else if(mode===3){ hookv(X+w*.3,Y,h*.9,lw); hookv(X+w*.7,Y+h*.1,h*.85,lw); wob(X,Y+h*.4,X+w,Y+h*.4,lw); wob(X,Y+h*.7,X+w,Y+h*.7,lw*.9); dots(X+w*.2,Y+h*.05,3,lw*.8); }
+    else { coil(X+w*.5,Y+h*.3,w*.28,lw); stack(X+w*.2,Y+h*.55,w*.6,h*.45,2,lw); feather(X+w*.5,Y+h*.55,Math.PI/2,h*.4,3,lw*.7,.3); }
+    g.restore();
+  }
+  function cluster(x,y,w,h,a,lw,n){ g.save(); g.translate(x,y); g.rotate(a||0); const cw=w/Math.max(1,Math.min(2,n)); const rows=Math.ceil(n/2);
+    for(let i=0;i<n;i++){ const cx=(n===1?0:(i%2?cw/2:-cw/2)), cy=(rows===1?0:((Math.floor(i/2)-(rows-1)/2)*h/rows)); glyph(cx,cy,cw*.92,h/rows*.92,0,lw); } g.restore(); }
+  /* brush-like hanja */
+  function han(txt,x,y,px,lw){ g.font="900 "+px+"px "+FF(); g.textAlign="center"; g.textBaseline="middle";
+    for(let i=0;i<3;i++){ g.fillStyle=col(); g.globalAlpha=i?.55:1; g.fillText(txt,x+(i?(r()-.5)*2.4:0),y+(i?(r()-.5)*2.4:0)); }
+    g.globalAlpha=1; g.strokeStyle=RED[0]; g.lineWidth=lw||2; g.strokeText(txt,x,y); }
+  function ring(x,y,rad,lw){ const p=[]; const s=rr(0,6.28); for(let a=0;a<=6.5;a+=.2) p.push([x+Math.cos(s+a)*(rad+(r()-.5)*1.5),y+Math.sin(s+a)*(rad+(r()-.5)*1.5)]); brush(p,lw,lw*.85); }
+  function medal(txt,x,y,rad,px){ ring(x,y,rad,7); han(txt,x,y+2,px,2.5); }
+  function rope(x0,y0,x1,y1,amp){ const n=36,dx=x1-x0,dy=y1-y0,l=Math.hypot(dx,dy),nx=-dy/l,ny=dx/l;
+    for(const s of [1,-1]){ const p=[]; for(let i=0;i<=n;i++){ const t=i/n,o=Math.sin(t*Math.PI*2*(l/46))*amp*s; p.push([x0+dx*t+nx*o,y0+dy*t+ny*o]); } brush(p,8,8); } }
+  const CORN=["春生木東","夏火南明","土中和安","秋金西義","冬水北智"][W];
+  const ELH=elHan[W], ANIM="子丑寅卯辰巳午未申酉戌亥"[C.yearBranch];
+  const tpl=(typeof current.forceTpl==="number")?current.forceTpl:Math.floor(r()*4);
+  const fr=(tpl===0||tpl===2);
+  /* header: three stars + 敕令 */
+  const header=(y)=>{ [[320,y-30],[290,y],[350,y]].forEach(p=>{ brush([[p[0]-12,p[1]],[p[0]+12,p[1]-6]],10,5); }); han("敕令",320,y+60,64,2); };
+  if(tpl===0||tpl===2){
+    /* rope frame + corner boxes */
+    rope(70,52,570,52,7); rope(70,908,570,908,7); rope(46,80,46,880,7); rope(594,80,594,880,7);
+    [[46,52],[594,52],[46,908],[594,908]].forEach((p,i)=>{ rect(p[0]-34,p[1]-34,68,68,7); han(CORN[i],p[0],p[1]+2,44,2); });
+    header(130);
+    cluster(150,300,190,240,0,11,2); cluster(490,300,190,240,0,11,2);
+    cluster(150,560,190,240,0,11,2); cluster(490,560,190,240,0,11,2);
+    feather(320,200,Math.PI/2,90,5,7,.22);
+    medal(ELH,320,430,74,88); ring(320,430,100,5);
+    cluster(320,640,170,150,0,10,2);
+    if(tpl===2){ cluster(320,250,150,110,0,9,2); cluster(320,740,200,90,0,9,3); cluster(150,430,60,120,0,8,1); cluster(490,430,60,120,0,8,1); }
+  } else if(tpl===1){
+    /* radial wheel */
+    header(110);
+    const cx=320,cy=500;
+    for(let k=0;k<6;k++){ const a=k*Math.PI/3-Math.PI/2; cluster(cx+Math.cos(a)*210,cy+Math.sin(a)*210,200,170,a+Math.PI/2,11,2); feather(cx+Math.cos(a)*115,cy+Math.sin(a)*115,a,80,5,6,.3); }
+    ring(cx,cy,118,6); medal(ELH,cx,cy,76,90);
+  } else {
+    /* octagon center + 8 cells + 4 medals */
+    header(100);
+    const cx=320,cy=520;
+    for(let k=0;k<8;k++){ const a=k*Math.PI/4-Math.PI/8; const px=cx+Math.cos(a)*215, py=cy+Math.sin(a)*215;
+      g.save(); g.translate(px,py); g.rotate(a+Math.PI/2); rect(-62,-52,124,104,7); g.restore(); cluster(px,py,110,90,a+Math.PI/2,6,1); }
+    const oct=[]; for(let k=0;k<=8;k++){ const a=k*Math.PI/4+Math.PI/8; oct.push([cx+Math.cos(a)*92,cy+Math.sin(a)*92]); } brush(oct,8,8);
+    han(ANIM,cx,cy+2,100,2.5);
+    [["福",cx,cy-318],["祿",cx+318-60,cy],["壽",cx,cy+318-30],["安",cx-318+60,cy]].forEach(m=>{ if(m[2]<905&&m[2]>20) medal(m[0],m[1],m[2],32,38); });
+  }
+  if(!fr){ [[88,215],[552,215],[88,790],[552,790]].forEach((p,i)=>{ if(tpl===3&&false) return; cluster(p[0],p[1],120,150,(i%2?.18:-.18),10,1); feather(p[0],p[1]+(i<2?-80:80),i<2?-Math.PI/2:Math.PI/2,50,3,5,.4); }); }
+  /* footer text + name + seal */
+  const FY=fr?835:888, NY=fr?878:930, SY=fr?812:893;
+  han("急急如律令",320,FY,44,1.6);
+  let px=30; const lab="受護者  "+nm; do{ g.font="900 "+px+"px "+FF(); px-=2; }while(g.measureText(lab).width>330&&px>14);
+  g.textAlign="center"; g.fillStyle=RED[1]; g.fillText(lab,250,NY);
+  g.fillStyle=RED[0]; g.fillRect(520,SY,58,58); g.fillStyle="#F8C617"; g.font="900 42px "+FF(); g.textBaseline="middle"; g.fillText("符",549,SY+30);
+  return c;
+}
+function prodBlock(kind,D){
+  const nm=current.nm, R=RCL(), w=R.elw[current.A.weak];
+  const one=(id,title,sub,btn)=>'<div class="dollc"><b>'+title+'</b><canvas id="'+id+'"></canvas><span>'+sub+'</span><button class="act cta-b" id="'+id+'S" type="button">'+btn+'</button></div>';
+  let h='';
+  if(kind==="s") h+='<div class="setbadge">🎁 '+D.st+'</div>';
+  if(kind!=="d") h+=one("tCv",D.tt(nm),D.ts('<span class="nowrap">'+w+'</span>'),D.tb);
+  if(kind!=="t") h+=one("dCv",D.dt(nm),D.ds,D.db);
+  if(ADMIN){ if(kind!=="t") h+='<button class="act cta-b" id="dReroll" type="button">🎲 '+(lang==="ko"?"다른 인형 뽑기":"Pick another doll")+'</button>'; return h+'<div class="tip" id="prodLock">👑 '+(lang==="ko"?"관리자 모드: 무제한 무료 저장":"Admin mode: unlimited free saving")+'</div>'; }
+  return h+'<div class="tip" id="prodLock">'+D.lock+'</div>';
+}
+function showProd(kind){
+  const D=DX[lang]||DX.en, box=$("dollBox");
+  if(kind!=="t" && !dollKey) dollKey=dollPick();
+  const go=()=>{
+    box.innerHTML=prodBlock(kind,D); box.classList.remove("hidden");
+    const wire=(cvId,cv,locked,fn)=>{ const t=$(cvId); t.width=cv.width; t.height=cv.height; t.getContext("2d").drawImage(cv,0,0);
+      $(cvId+"S").addEventListener("click",()=>{ if(locked){ $("prodLock").scrollIntoView({block:"center",behavior:"smooth"}); return; }
+        cv.toBlob(bl=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(bl); a.download=fn; a.click(); },"image/png"); }); };
+    if(kind!=="d") wire("tCv",drawTalis(),TALIS_LOCKED,"talisman.png");
+    if(kind!=="t") wire("dCv",drawDoll(),DOLL_LOCKED,"worry-doll.png");
+    if($("dReroll")) $("dReroll").addEventListener("click",()=>{ dollKey=null; dollImg=null; showProd(kind); });
+    box.scrollIntoView({behavior:"smooth",block:"start"});
+  };
+  const ready=()=>{ try{document.fonts.ready.then(go);}catch(e){go();} };
+  if(kind==="t") return ready();
+  if(dollImg&&dollImg._k===dollKey) return ready();
+  const im=new Image(); im._k=dollKey; im.onload=()=>{dollImg=im; ready();}; im.src="dolls/doll_"+dollKey+".webp";
+}
+
+const APP_LINKS={munjo:"munjo/",gwang:"gwangdeok/"};
+const AX={
+ en:{bt:"A talisman to guard your Saju energy awaits at 光德占堂",bd:"Empress & Dohwang's verdict plus a guardian talisman",h:"✨ More fortune houses to visit",m:"Munjo Sinjeom",ms:"The sacred bird brings today's omen.",g:"光德占堂",gs:"The sky-high fortune hall: Empress & Dohwang's verdict plus a guardian talisman.",open:"Open ›",soon:"Opening very soon 🙏",t1:"Guard your Saju energy",t2:"with a talisman from 光德占堂",tb:"See talismans ›"},
+ ko:{bt:"내 사주 기운을 지켜 줄 부적은 광덕점당에서",bd:"영연황후와 환욱도황의 점사와 수호 부적",h:"✨ 다른 점집도 들러 보세요",m:"문조 신점",ms:"신령한 새가 물어다 주는 오늘의 점괘",g:"光德占堂",gs:"하늘 위의 점집 · 영연황후와 환욱도황의 점사와 수호 부적",open:"열기 ›",soon:"곧 문을 엽니다 🙏",t1:"내 사주 기운을 지켜 줄",t2:"부적은 광덕점당에서",tb:"부적 보러 가기 ›"},
+ ja:{bt:"あなたの四柱の気を守るお札は光德占堂で",bd:"皇后と道皇の占いと守護のお札",h:"✨ ほかの占いの館へ",m:"文鳥神占",ms:"神鳥が運んでくる今日のお告げ",g:"光德占堂",gs:"天上の占い館・皇后と道皇の占いと守護のお札",open:"開く ›",soon:"まもなくオープン 🙏",t1:"私の四柱の気を守る",t2:"お札は光德占堂で",tb:"お札を見る ›"},
+ zh:{bt:"守護你八字氣運的符，盡在光德占堂",bd:"皇后與道皇的占辭與守護符",h:"✨ 再去別的占堂看看",m:"文鳥神占",ms:"靈鳥銜來今日的卦象",g:"光德占堂",gs:"天上占堂・皇后與道皇的占辭與守護符",open:"開啟 ›",soon:"即將開放 🙏",t1:"守護我八字氣運的",t2:"符咒就在光德占堂",tb:"查看符咒 ›"},
+ es:{bt:"El talismán que protege tu energía Saju está en 光德占堂",bd:"Veredicto de la Emperatriz y el Dohwang más un talismán guardián",h:"✨ Más casas de adivinación",m:"Munjo Sinjeom",ms:"El ave sagrada trae el presagio de hoy.",g:"光德占堂",gs:"El salón celestial: veredicto de la Emperatriz y el Dohwang más un talismán guardián.",open:"Abrir ›",soon:"Abre muy pronto 🙏",t1:"Protege tu energía del Saju",t2:"con un talismán de 光德占堂",tb:"Ver talismanes ›"},
+ fr:{bt:"Le talisman qui protège ton énergie Saju t'attend à 光德占堂",bd:"Verdict de l'Impératrice et du Dohwang, plus un talisman gardien",h:"✨ D'autres maisons de divination",m:"Munjo Sinjeom",ms:"L'oiseau sacré apporte le présage du jour.",g:"光德占堂",gs:"Le salon céleste : verdict de l'Impératrice et du Dohwang, plus un talisman gardien.",open:"Ouvrir ›",soon:"Ouverture très bientôt 🙏",t1:"Protégez votre énergie du Saju",t2:"avec un talisman de 光德占堂",tb:"Voir les talismans ›"}
+};
+function svgMunjo(){
+  return '<svg viewBox="0 0 360 170" aria-hidden="true"><circle cx="290" cy="58" r="46" fill="#FDE68A" stroke="#111" stroke-width="3"/>'+
+  '<path d="M16 138 L344 124" stroke="#78350F" stroke-width="9" stroke-linecap="round"/><path d="M60 133 l-14 -20 M250 127 l16 -22" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>'+
+  '<polygon points="118,98 62,128 84,102" fill="#94A3B8" stroke="#111" stroke-width="3" stroke-linejoin="round"/>'+
+  '<ellipse cx="156" cy="96" rx="46" ry="36" fill="#CBD5E1" stroke="#111" stroke-width="3.5"/><ellipse cx="156" cy="108" rx="32" ry="21" fill="#F8FAFC"/>'+
+  '<path d="M146 92 q22 -14 40 4" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>'+
+  '<circle cx="204" cy="66" r="26" fill="#111"/><ellipse cx="197" cy="73" rx="13" ry="10" fill="#fff"/>'+
+  '<circle cx="209" cy="60" r="5.5" fill="#fff"/><circle cx="210.5" cy="60" r="2.5" fill="#111"/>'+
+  '<polygon points="226,62 256,70 226,80" fill="#F43F5E" stroke="#111" stroke-width="3" stroke-linejoin="round"/>'+
+  '<g transform="rotate(8 244 96)"><rect x="232" y="76" width="30" height="44" rx="3" fill="#FACC15" stroke="#111" stroke-width="3"/><path d="M238 88 h18 M238 98 h18 M238 108 h12" stroke="#B91C1C" stroke-width="3.5" stroke-linecap="round"/></g>'+
+  '<path d="M146 130 v10 M166 130 v10" stroke="#111" stroke-width="4" stroke-linecap="round"/></svg>';
+}
+function svgGwang(){
+  const F='"Noto Serif CJK KR","Noto Serif KR","Noto Serif CJK TC","Batang","Songti TC",serif';
+  return '<svg viewBox="0 0 360 170" aria-hidden="true"><circle cx="180" cy="86" r="74" fill="none" stroke="#FACC15" stroke-width="5" opacity=".9"/><circle cx="180" cy="86" r="64" fill="none" stroke="#FACC15" stroke-width="2" stroke-dasharray="2 8"/>'+
+  '<g fill="#fff" opacity=".55"><ellipse cx="60" cy="146" rx="52" ry="14"/><ellipse cx="108" cy="154" rx="46" ry="12"/><ellipse cx="300" cy="148" rx="54" ry="14"/><ellipse cx="250" cy="157" rx="44" ry="11"/></g>'+
+  '<text x="180" y="40" text-anchor="middle" font-size="17" font-weight="900" fill="#FDE68A" letter-spacing="6" font-family=\''+F+'\'>天 上 占 堂</text>'+
+  '<g font-family=\''+F+'\' font-weight="900" font-size="64" text-anchor="middle" stroke-linejoin="round" paint-order="stroke">'+
+  '<text x="92" y="118" fill="#FACC15" stroke="#7F1D1D" stroke-width="6">光</text><text x="150" y="118" fill="#FACC15" stroke="#7F1D1D" stroke-width="6">德</text>'+
+  '<text x="210" y="118" fill="#DC2626" stroke="#FACC15" stroke-width="5">占</text><text x="268" y="118" fill="#FACC15" stroke="#7F1D1D" stroke-width="6">堂</text></g>'+
+  '<rect x="304" y="104" width="34" height="34" fill="#B91C1C" stroke="#FACC15" stroke-width="2.5"/><text x="321" y="130" text-anchor="middle" font-size="24" font-weight="900" fill="#FACC15" font-family=\''+F+'\'>符</text></svg>';
+}
+function paintApps(){
+  const A=AX[lang]||AX.en, el=$("appsArea"); if(!el) return;
+  const post=(cls,id,svg,t,s)=>'<a class="poster '+cls+'" id="'+id+'" href="#" role="button">'+svg+'<div class="pt"><div><b>'+t+'</b><small>'+s+'</small></div><span class="go">'+A.open+'</span></div></a>';
+  const tb=$("talBanner"); if(tb){ tb.innerHTML='<a class="poster po-g" id="poBanner" href="#" role="button">'+svgGwang()+'<div class="pt"><div><b style="white-space:normal;font-size:21px">'+A.bt+'</b><small>'+A.bd+'</small></div><span class="go">'+A.open+'</span></div></a>';
+    $("poBanner").addEventListener("click",e=>{e.preventDefault(); const u=APP_LINKS.gwang; if(u) window.open(u,"_blank","noopener"); }); }
+  el.innerHTML='<h2>'+A.h+'</h2>'+post("po-m","poMunjo",svgMunjo(),A.m,A.ms)+post("po-g","poGwang",svgGwang(),A.g,A.gs)+'<div class="tip hidden" id="appToast" style="text-align:center">'+A.soon+'</div>';
+  const tl=$("talisLink"); if(tl){ tl.innerHTML='<a class="tlink" id="tlGo" href="#" role="button"><span class="fu">符</span><b><span>'+A.t1+'</span><span>'+A.t2+'</span></b><span class="go">'+A.tb+'</span></a>';
+    $("tlGo").addEventListener("click",e=>{ e.preventDefault(); const u=APP_LINKS.gwang; if(u) window.open(u,"_blank","noopener"); else { $("appToast").classList.remove("hidden"); $("appToast").scrollIntoView({block:"center",behavior:"smooth"}); } }); }
+  [["poMunjo","munjo"],["poGwang","gwang"]].forEach(k=>{
+    $(k[0]).addEventListener("click",e=>{ e.preventDefault(); const u=APP_LINKS[k[1]];
+      if(u){ window.open(u,"_blank","noopener"); } else { $("appToast").classList.remove("hidden"); $("appToast").scrollIntoView({block:"center",behavior:"smooth"}); } });
+  });
 }
 function paintResult(){
   const t=T(), c=current, P=c.P;
@@ -588,10 +1219,9 @@ function paintResult(){
     '<span class="pill">'+t.pillEl(elName)+'</span>'+
     '<span class="pill">'+t.pillYear(STEM_META[P.yearStem].e,P.yearBranch)+'</span>';
 
-  const cnt=[0,0,0,0,0];
-  cnt[STEM_META[P.yearStem].e]++; cnt[BR_META[P.yearBranch].e]++; cnt[sm.e]++; cnt[BR_META[P.dayBranch].e]++;
+  const cnt=current.A.cnt, cmax=Math.max(3,...cnt);
   $("bars").innerHTML=t.el.map((n,i)=>
-    '<div class="bar"><span style="color:'+EL_COLOR[i]+'">'+n+'</span><div class="track"><div class="fill" style="width:'+(cnt[i]/4*100)+'%;background:'+EL_COLOR[i]+'"></div></div><span>'+cnt[i]+'</span></div>'
+    '<div class="bar"><span style="color:'+EL_COLOR[i]+'">'+n+'</span><div class="track"><div class="fill" style="width:'+(cnt[i]/cmax*100)+'%;background:'+EL_COLOR[i]+'"></div></div><span>'+cnt[i]+'</span></div>'
   ).join("");
   const miss=t.el.filter((n,i)=>cnt[i]===0);
   $("missing").innerHTML = miss.length ? t.missing(miss.join(t.joiner)) : t.full;
@@ -600,11 +1230,15 @@ function paintResult(){
   $("rTrait").textContent=S.tr;
   $("rLove").textContent=S.lv;
   $("rWork").textContent=S.wk;
+  paintDeep();
 }
 function reveal(){
   const dt=parseDate($("dob").value);
   if(!dt){ alert(T().needDob); return; }
-  current={P:pillars(dt.y,dt.m,dt.d),nm:esc(($("name").value||"").trim())};
+  const hr=parseInt($("tm").value,10), gv=$("gn").value;
+  const C=chart(dt.y,dt.m,dt.d,isNaN(hr)?-1:hr), A=analyze(C), D=dayun(C,A,gv==="f"?false:true);
+  const P=pillars(dt.y,dt.m,dt.d); P.yearStem=C.yearStem; P.yearBranch=C.yearBranch;
+  current={P,C,A,D,age:ageOn(dt.y,dt.m,dt.d),nm:esc(($("name").value||"").trim())};
   lastMatch=null;
   paintResult();
   $("matchOut").classList.add("hidden");
@@ -676,9 +1310,9 @@ $("goBtn").addEventListener("click",reveal);
 $("matchBtn").addEventListener("click",match);
 $("shareBtn").addEventListener("click",share);
 $("againBtn").addEventListener("click",()=>{
-  current=null;lastMatch=null;
+  current=null;lastMatch=null;dollKey=null;
   $("resultArea").classList.add("hidden");$("formArea").classList.remove("hidden");
-  $("dob").value="";$("dob2").value="";window.scrollTo({top:0,behavior:"smooth"});
+  $("dob").value="";$("dob2").value="";$("tm").value="-1";$("gn").value="s";window.scrollTo({top:0,behavior:"smooth"});
 });
 setLang(detect());
 if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}
