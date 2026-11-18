@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7C3AED">
+<title>Sajupia · K-Saju | Saju 四柱推命 八字 Cuatro Pilares Quatre Piliers</title>
+<meta name="description" content="Free Korean Saju (Four Pillars of Destiny) · 無料の韓国サジュ（四柱推命）· 免費韓國四柱八字 · Saju coreano gratis (Cuatro Pilares del Destino) · Saju coréen gratuit (Quatre Piliers du Destin)">
+<meta property="og:title" content="Sajupia · K-Saju — Saju · 四柱推命 · 八字 · Cuatro Pilares · Quatre Piliers">
+<meta property="og:description" content="Free Korean Saju reading in English, 日本語, 繁體中文, Español, Français.">
+<meta property="og:type" content="website">
+<style>
+:root{--ink:#111111}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","Noto Sans JP","Noto Sans TC","Noto Sans CJK SC",Arial,sans-serif;
+  color:var(--ink);background:#FFF1F8;font-size:17px;line-height:1.85;font-weight:600;
+}
+.wrap{max-width:520px;margin:0 auto;padding:0 0 28px}
+.hero{background:linear-gradient(160deg,#7C3AED 0%,#DB2777 60%,#F59E0B 100%);color:#fff;padding:30px 20px 28px;text-align:center}
+.shout{display:block;margin:0 auto 18px;max-width:340px;background:#FACC15;color:#111;border:3px solid #111;border-radius:18px;padding:10px 14px;font-size:22px;line-height:1.5;font-weight:900;text-wrap:balance}
+.shout .ask{display:block;margin-top:2px;font-size:24px;color:#B91C1C}
+.brand{font-size:15px;letter-spacing:.2em;font-weight:900;white-space:nowrap}
+.langs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.chip{width:auto;margin:0;padding:6px 14px;font-size:16px;line-height:1.6;border-radius:999px;border:2px solid #fff;background:rgba(0,0,0,.18);color:#fff;font-weight:900;white-space:nowrap;cursor:pointer;font-family:inherit}
+.chip.on{background:#fff;color:#111}
+.hero h1{margin:16px 0 10px;font-size:32px;line-height:1.35;font-weight:900;text-wrap:balance}
+.hero p{margin:0;font-size:18px;line-height:1.8;font-weight:700;text-wrap:balance}
+.kw{margin-top:12px;font-size:16px;line-height:1.8;font-weight:800;letter-spacing:.02em}
+.hanja{font-size:46px;letter-spacing:.18em;font-weight:900;margin:16px 0 0;white-space:nowrap}
+.card{margin:16px 14px 0;border-radius:22px;padding:22px 20px;background:#fff;border:3px solid #111}
+.card h2{margin:0 0 12px;font-size:23px;line-height:1.45;font-weight:900;text-wrap:balance}
+label{display:block;font-size:18px;font-weight:900;margin:14px 0 6px;text-wrap:balance}
+input[type=date],input[type=text]{width:100%;font:inherit;font-weight:800;font-size:19px;padding:14px;border:3px solid #111;border-radius:14px;background:#FEF3C7;color:#111}
+input:focus{outline:4px solid #DB2777}
+button.act{font:inherit;font-weight:900;cursor:pointer;border:3px solid #111;border-radius:16px;padding:16px 18px;width:100%;font-size:20px;color:#fff;line-height:1.5}
+.btn-main{background:linear-gradient(90deg,#DC2626,#DB2777);margin-top:20px}
+.btn-share{background:#15803D;margin-top:14px}
+.btn-alt{background:#7C3AED;margin-top:14px}
+.steps{display:grid;gap:12px;margin:16px 14px 0}
+.step{border-radius:18px;padding:16px 18px;color:#fff;border:3px solid #111;font-size:18px;font-weight:800;line-height:1.7}
+.step b{font-size:20px;font-weight:900;display:block}
+.s1{background:#15803D}.s2{background:#D97706}.s3{background:#1D4ED8}
+.hidden{display:none}
+.result-card{margin:16px 14px 0;border-radius:24px;padding:26px 20px;color:#fff;text-align:center;border:3px solid #111}
+.result-card .big{font-size:84px;line-height:1.2;font-weight:900;white-space:nowrap}
+.result-card .tag{font-size:15px;letter-spacing:.12em;font-weight:900;text-wrap:balance}
+.result-card h2{margin:8px 0 4px;font-size:30px;line-height:1.35;font-weight:900;text-wrap:balance}
+.result-card .sub{font-size:19px;font-weight:800;line-height:1.7;text-wrap:balance}
+.pill{display:inline-block;background:#fff;color:#111;border-radius:999px;padding:6px 16px;font-size:17px;font-weight:900;margin:12px 4px 0;border:2px solid #111;max-width:100%}
+.bars{display:grid;gap:12px;margin-top:6px}
+.bar{display:grid;grid-template-columns:78px 1fr 30px;align-items:center;gap:10px;font-size:17px;font-weight:900}
+.bar .track{height:20px;border-radius:999px;background:#E5E7EB;border:2px solid #111;overflow:hidden}
+.bar .fill{height:100%;border-radius:999px}
+.tip{border-radius:16px;padding:14px 16px;margin-top:14px;font-size:18px;font-weight:800;line-height:1.75;background:#FEF3C7;border:3px solid #111}
+.read{border-radius:18px;padding:16px 18px;margin-top:12px;border:3px solid #111;color:#fff;font-size:18px;line-height:1.85;font-weight:700}
+.read b{display:block;font-size:20px;font-weight:900;margin-bottom:2px}
+.r-trait{background:#7C3AED}.r-love{background:#DB2777}.r-work{background:#1D4ED8}
+.score{font-size:64px;line-height:1.2;font-weight:900;text-align:center;margin:6px 0 0}
+.meter{height:24px;border-radius:999px;border:3px solid #111;background:#E5E7EB;overflow:hidden;margin:6px 0 12px}
+.meter div{height:100%;background:linear-gradient(90deg,#DC2626,#DB2777,#7C3AED)}
+.lock{margin:16px 14px 0;border-radius:24px;border:3px solid #111;background:linear-gradient(160deg,#111,#7C3AED);color:#fff;padding:22px 20px}
+.lock h2{margin:0 0 10px;font-size:24px;line-height:1.45;font-weight:900;text-wrap:balance}
+.lock ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lock li{display:grid;grid-template-columns:34px 1fr;gap:6px;font-size:18px;font-weight:800;line-height:1.7}
+.soon{margin-top:16px;background:#F59E0B;color:#111;border:3px solid #fff;border-radius:16px;padding:14px;text-align:center;font-size:19px;font-weight:900;text-wrap:balance}
+.foot{margin:18px 14px 0;text-align:center;font-size:15px;font-weight:800;line-height:1.8}
+.foot div{text-wrap:balance}
+.nowrap{white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="shout" data-k="shout"></div>
+    <div class="brand">SAJUPIA · K-SAJU</div>
+    <div class="langs" id="langs">
+      <button class="chip" type="button" data-lang="en">English</button>
+      <button class="chip" type="button" data-lang="ja">日本語</button>
+      <button class="chip" type="button" data-lang="zh">繁體中文</button>
+      <button class="chip" type="button" data-lang="es">Español</button>
+      <button class="chip" type="button" data-lang="fr">Français</button>
+    </div>
+    <h1><span class="nowrap" data-k="h1a"></span><br><span class="nowrap" data-k="h1b"></span></h1>
+    <p data-k="hp"></p>
+    <div class="hanja">四柱八字</div>
+    <div class="kw"><span class="nowrap">Saju · 四柱推命 · 八字</span><br><span class="nowrap">Cuatro Pilares · Quatre Piliers</span></div>
+  </header>
+
+  <section id="formArea">
+    <div class="card">
+      <h2 data-k="formTitle"></h2>
+      <label for="name" data-k="nameLabel"></label>
+      <input id="name" type="text" maxlength="24" autocomplete="given-name">
+      <label for="dob" data-k="dobLabel"></label>
+      <input id="dob" type="date" min="1900-01-01" max="2100-12-31">
+      <button class="act btn-main" id="goBtn" type="button" data-k="go"></button>
+    </div>
+    <div class="steps">
+      <div class="step s1"><b data-k="s1b"></b><span data-k="s1t"></span></div>
+      <div class="step s2"><b data-k="s2b"></b><span data-k="s2t"></span></div>
+      <div class="step s3"><b data-k="s3b"></b><span data-k="s3t"></span></div>
+    </div>
+  </section>
+
+  <section id="resultArea" class="hidden">
+    <div id="resCard" class="result-card"></div>
+
+    <div class="card">
+      <h2 data-k="fiveTitle"></h2>
+      <div class="bars" id="bars"></div>
+      <div class="tip" id="missing"></div>
+    </div>
+
+    <div class="card">
+      <h2 id="readTitle"></h2>
+      <div class="read r-trait"><b data-k="who"></b><span id="rTrait"></span></div>
+      <div class="read r-love"><b data-k="loveLbl"></b><span id="rLove"></span></div>
+      <div class="read r-work"><b data-k="workLbl"></b><span id="rWork"></span></div>
+    </div>
+
+    <div class="card">
+      <h2 data-k="matchTitle"></h2>
+      <label for="dob2" data-k="partnerLabel"></label>
+      <input id="dob2" type="date" min="1900-01-01" max="2100-12-31">
+      <button class="act btn-alt" id="matchBtn" type="button" data-k="matchBtn"></button>
+      <div id="matchOut" class="hidden">
+        <div class="score" id="mScore"></div>
+        <div class="meter"><div id="mMeter" style="width:0%"></div></div>
+        <div class="tip" id="mTitle"></div>
+        <div class="read r-love" style="margin-top:12px"><span id="mText"></span></div>
+      </div>
+    </div>
+
+    <div class="lock">
+      <h2 data-k="lockTitle"></h2>
+      <ul>
+        <li><span>🔒</span><span data-k="l1"></span></li>
+        <li><span>🔒</span><span data-k="l2"></span></li>
+        <li><span>🔒</span><span data-k="l3"></span></li>
+        <li><span>🔒</span><span data-k="l4"></span></li>
+        <li><span>🔒</span><span data-k="l5"></span></li>
+      </ul>
+      <div class="soon" data-k="soon"></div>
+    </div>
+
+    <div class="card">
+      <h2 data-k="shareTitle"></h2>
+      <button class="act btn-share" id="shareBtn" type="button" data-k="shareBtn"></button>
+      <div class="tip hidden" id="shareMsg"></div>
+      <button class="act btn-alt" id="againBtn" type="button" data-k="againBtn"></button>
+    </div>
+  </section>
+
+  <div class="foot">
+    <div>Sajupia</div>
+    <div data-k="f1"></div>
+    <div data-k="f2"></div>
+  </div>
+</div>
+
+<script>
+//CALC_START
+const STEM_META=[
+  {h:"甲",e:0,p:1},{h:"乙",e:0,p:0},{h:"丙",e:1,p:1},{h:"丁",e:1,p:0},{h:"戊",e:2,p:1},
+  {h:"己",e:2,p:0},{h:"庚",e:3,p:1},{h:"辛",e:3,p:0},{h:"壬",e:4,p:1},{h:"癸",e:4,p:0}
+];
+const BR_META=[
+  {h:"子",e:4},{h:"丑",e:2},{h:"寅",e:0},{h:"卯",e:0},{h:"辰",e:2},{h:"巳",e:1},
+  {h:"午",e:1},{h:"未",e:2},{h:"申",e:3},{h:"酉",e:3},{h:"戌",e:2},{h:"亥",e:4}
+];
+const EL_COLOR=["#15803D","#DC2626","#D97706","#475569","#1D4ED8"];
+const mod=(a,b)=>((a%b)+b)%b;
+function jdn(y,m,d){
+  const a=Math.floor((14-m)/12), yy=y+4800-a, mm=m+12*a-3;
+  return d+Math.floor((153*mm+2)/5)+365*yy+Math.floor(yy/4)-Math.floor(yy/100)+Math.floor(yy/400)-32045;
+}
+function pillars(y,m,d){
+  const J=jdn(y,m,d);
+  let ys=y; if(m<2||(m===2&&d<4)) ys=y-1;
+  return {dayStem:mod(J+9,10),dayBranch:mod(J+1,12),yearStem:mod(ys-4,10),yearBranch:mod(ys-4,12)};
+}
+function compat(a,b){
+  const A=STEM_META[a], B=STEM_META[b];
+  if(a!==b && mod(a,5)===mod(b,5)) return {score:96,key:"heaven"};
+  let s,key;
+  if(A.e===B.e){s=78;key="mirror";}
+  else if(B.e===mod(A.e+1,5)){s=86;key="nourish";}
+  else if(A.e===mod(B.e+1,5)){s=90;key="nourished";}
+  else if(B.e===mod(A.e+2,5)){s=70;key="challenge";}
+  else {s=68;key="challenged";}
+  if(A.p!==B.p) s+=4;
+  return {score:Math.min(s,99),key};
+}
+//CALC_END
+
+const I18N={
+en:{
+ shout:"I'll tell you your destiny!<span class=\"ask\">Are you ready?</span>",
+ docTitle:"Sajupia · K-Saju | Free Korean Saju (Four Pillars of Destiny) Reading",
+ h1a:"Discover Your",h1b:"Korean Destiny",
+ hp:"Free Korean Saju <span class=\"nowrap\">(Four Pillars of Destiny)</span> reading from your birth date. Your element, love style and best match.",
+ formTitle:"Enter your birth date",nameLabel:"Your name (optional)",namePh:"e.g. Emma",dobLabel:"Your birth date",go:"Reveal My Destiny",
+ s1b:"1 · Your Day Master",s1t:"Your core self, from your birth day.",
+ s2b:"2 · Your Element",s2t:"Wood, Fire, Earth, Metal or Water.",
+ s3b:"3 · Your Match",s3t:"Add a partner and see your score.",
+ tag:"YOUR DAY MASTER",
+ you:n=>n?n+",<br>you are ":"You are ",youSuf:"",
+ pillEl:e=>e+" Element",
+ pillYear:(e,b)=>"Year of the "+I18N.en.el[e]+" "+I18N.en.an[b],
+ fiveTitle:"Your Five Elements",joiner:" and ",
+ missing:l=>"Missing in your year and day pillars: <b>"+l+"</b>. Your full chart reveals whether it shows up elsewhere.",
+ full:"All five elements appear in your year and day pillars. Your full chart shows how they balance.",
+ readTitle:n=>n?n+"'s Reading":"Your Reading",
+ who:"Who you are",loveLbl:"Your love style",workLbl:"Your career energy",
+ matchTitle:"Check your match",partnerLabel:"Partner or crush's birth date",matchBtn:"Check Compatibility",youL:"You",themL:"Them",
+ lockTitle:"Your full Destiny Report",
+ l1:"Complete 8-character chart with birth hour",l2:"Love timing: when your best chances come",l3:"Career and money cycles",l4:"2027 year-ahead forecast",l5:"Deep couple report for two people",
+ soon:"Full report launching soon",
+ shareTitle:"Share your result",shareBtn:"Share My Destiny Card",againBtn:"Read Another Birth Date",
+ copied:"Copied! Paste it anywhere to share.",copyFail:"Press and hold the link in your address bar to copy it.",
+ f1:"Korean Saju for fun and self-reflection",f2:"Hour pillar comes with the full report.",
+ needDob:"Please enter your birth date.",needDob2:"Please enter your partner's birth date.",
+ shareText:(s,t,e)=>"I'm a "+s+" — "+t+" ("+e+" element). Find your Korean Saju Day Master:",
+ cardTop:"MY DAY MASTER",cardFoot:"Find yours — free Korean Saju",
+ el:["Wood","Fire","Earth","Metal","Water"],
+ an:["Rat","Ox","Tiger","Rabbit","Dragon","Snake","Horse","Goat","Monkey","Rooster","Dog","Pig"],
+ stems:[
+  {n:"Yang Wood",t:"The Great Tree",tr:"Upright, ambitious and born to lead. You grow straight toward your goals and people lean on your strength, but you hate bending, even when bending is the smart move.",lv:"Loyal and protective. You fall for people who let you grow in your own direction.",wk:"Founder, leader, builder. You thrive when you own the vision."},
+  {n:"Yin Wood",t:"The Wild Vine",tr:"Flexible, charming and quietly tough. You find a way around every wall, and people relax the moment you smile.",lv:"Romantic and attentive. You read your partner's mood before they say a word.",wk:"Design, people-facing and creative roles. You win with adaptability."},
+  {n:"Yang Fire",t:"The Sun",tr:"Warm, bold and impossible to ignore. You light up a room, share credit freely and bounce back fast from setbacks.",lv:"Generous and passionate. You need a partner who can enjoy your brightness.",wk:"Stage, sales, teaching and public-facing leadership."},
+  {n:"Yin Fire",t:"The Candle",tr:"Intense, intuitive and deeply focused. Your warmth is gentle, but your mind burns through details others miss.",lv:"Slow to open up, devoted once you do. You want a deep and private connection.",wk:"Research, writing, healing arts and craft mastery."},
+  {n:"Yang Earth",t:"The Mountain",tr:"Steady, trustworthy and immovable when it counts. People bring you their problems because you never panic.",lv:"A slow burn with solid commitment. You show love by showing up.",wk:"Management, real estate, operations. Anywhere a stable anchor is needed."},
+  {n:"Yin Earth",t:"The Garden",tr:"Nurturing, practical and quietly wise. You grow people the way a garden grows life: patiently and with great care.",lv:"Caring and loyal. You remember every little thing that matters to them.",wk:"Education, care, planning, product and community work."},
+  {n:"Yang Metal",t:"The Sword",tr:"Direct, decisive and fiercely fair. You cut through confusion and say what others avoid. Your honesty is your edge.",lv:"All-in loyalty with high standards. You value truth over sweet talk.",wk:"Law, engineering, finance and leading through a crisis."},
+  {n:"Yin Metal",t:"The Jewel",tr:"Refined, sharp-eyed and polished under pressure. You spot quality instantly and hold yourself to a high standard.",lv:"Selective and elegant. You want a partner who appreciates your depth.",wk:"Brand, beauty, analysis and detail-heavy fields."},
+  {n:"Yang Water",t:"The Ocean",tr:"Big-minded, free-spirited and endlessly curious. You move with the tide of ideas and see the whole map.",lv:"Adventurous and open. You need space and a partner who loves exploring.",wk:"Trade, travel, strategy, tech. Anything global."},
+  {n:"Yin Water",t:"The Rain",tr:"Gentle, perceptive and deeply imaginative. You sense moods and meanings that others never notice.",lv:"Soulful and sensitive. You bond through quiet, honest conversations.",wk:"Art, counseling, writing and intuition-driven work."}
+ ],
+ cmp:{
+  heaven:{t:"Heavenly Match",x:"In Saju this is a classic stem combination: your two Day Masters naturally pull toward each other. Rare, magnetic and built to grow together."},
+  mirror:{t:"The Mirror",x:"You share the same element, so you understand each other instantly. The challenge is that you also share the same blind spots."},
+  nourish:{t:"You Nourish Them",x:"Your energy feeds theirs. You bring the support and spark that helps this person grow. Just make sure you get cared for too."},
+  nourished:{t:"They Nourish You",x:"Their energy feeds yours. Being around this person makes you feel supported and more like yourself. A very comfortable pairing."},
+  challenge:{t:"You Challenge Them",x:"Your energy pushes theirs. It is exciting and full of tension, and it works when you both stay kind during the sparks."},
+  challenged:{t:"They Challenge You",x:"Their energy tests yours. They will push you out of your comfort zone. Growth is possible, with patience on both sides."}
+ }
+},
+ja:{
+ shout:"あなたの運命、<br>私が教えてあげる！<span class=\"ask\">覚悟はいい？</span>",
+ docTitle:"Sajupia · K-Saju | 無料の韓国サジュ（四柱推命）鑑定",
+ h1a:"あなたの",h1b:"韓国式運命を占う",
+ hp:"韓国サジュ（四柱推命）を無料鑑定。<br>五行・恋愛・相性がわかります。",
+ formTitle:"生年月日を入力",nameLabel:"お名前（任意）",namePh:"例：さくら",dobLabel:"生年月日",go:"運命を見る",
+ s1b:"1 · 日主（にっしゅ）",s1t:"生まれた日から、あなたの核がわかります。",
+ s2b:"2 · 五行",s2t:"木・火・土・金・水のどれかがわかります。",
+ s3b:"3 · 相性",s3t:"パートナーを入れてスコアを確認。",
+ tag:"あなたの日主",
+ you:n=>n?n+"さん、<br>あなたは":"あなたは",youSuf:"タイプ",
+ pillEl:e=>e+"のエネルギー",
+ pillYear:(e,b)=>I18N.ja.el[e]+"の"+I18N.ja.an[b]+"年",
+ fiveTitle:"五行バランス",joiner:"・",
+ missing:l=>"年柱と日柱に足りない五行：<b>"+l+"</b>。全体の命式では、他の柱にあるかどうかがわかります。",
+ full:"年柱と日柱に五行がすべてそろっています。フル鑑定でそのバランスを詳しく見られます。",
+ readTitle:n=>n?n+"さんの鑑定":"あなたの鑑定",
+ who:"あなたはこんな人",loveLbl:"恋愛スタイル",workLbl:"仕事のエネルギー",
+ matchTitle:"相性を見る",partnerLabel:"パートナー・気になる人の生年月日",matchBtn:"相性をチェック",youL:"あなた",themL:"相手",
+ lockTitle:"フル運命レポート",
+ l1:"出生時刻を含む八字の完全な命式",l2:"恋愛のタイミング：チャンスが来る時期",l3:"仕事とお金のサイクル",l4:"2027年の年運予測",l5:"2人のための詳しい相性レポート",
+ soon:"フルレポートは近日公開",
+ shareTitle:"結果をシェア",shareBtn:"運命カードをシェア",againBtn:"別の生年月日を占う",
+ copied:"コピーしました！好きな場所に貼り付けて共有できます。",copyFail:"アドレスバーのリンクを長押ししてコピーしてください。",
+ f1:"遊びと自己理解のための韓国式サジュ",f2:"時柱はフルレポートに含まれます。",
+ needDob:"生年月日を入力してください。",needDob2:"相手の生年月日を入力してください。",
+ shareText:(s,t,e)=>"私は"+s+"（"+t+"）、"+e+"タイプ。あなたの韓国式サジュ日主を調べよう：",
+ cardTop:"私の日主",cardFoot:"無料で韓国式サジュを占おう",
+ el:["木","火","土","金","水"],
+ an:["ネズミ","ウシ","トラ","ウサギ","タツ","ヘビ","ウマ","ヒツジ","サル","トリ","イヌ","イノシシ"],
+ stems:[
+  {n:"陽の木",t:"大樹",tr:"まっすぐで野心的、生まれながらのリーダー。目標へ一直線に伸び、周りはあなたの強さに頼ります。ただ、曲がることが苦手で、折れた方が賢い場面でも譲れません。",lv:"誠実で守る愛。自分らしく成長させてくれる人に惹かれます。",wk:"起業家、リーダー、ビルダー。自分のビジョンを持てる場所で輝きます。"},
+  {n:"陰の木",t:"蔓（つる）",tr:"しなやかで魅力的、静かに強い人。どんな壁も回り込んで進み、あなたが笑うと周りの人は安心します。",lv:"ロマンチックで気配り上手。相手の気分を言われる前に察します。",wk:"デザイン、対人サービス、クリエイティブ職。適応力で勝つタイプです。"},
+  {n:"陽の火",t:"太陽",tr:"温かく大胆で、どこにいても目立つ存在。場を明るくし、手柄を分け合い、失敗からもすぐ立ち直ります。",lv:"情熱的で気前の良い愛。あなたの輝きを楽しめる人が合います。",wk:"ステージ、営業、教育、人前に立つリーダー職。"},
+  {n:"陰の火",t:"灯火",tr:"強い集中力と直感の持ち主。温かさはやわらかいけれど、頭の中は他の人が見逃す細部まで燃やし尽くします。",lv:"心を開くまでは時間がかかるものの、開いたら一途。深く静かなつながりを望みます。",wk:"研究、執筆、癒やしの仕事、職人的な極め。"},
+  {n:"陽の土",t:"山",tr:"どっしり安定して信頼できる人。いざという時に動じないので、みんなが悩みを持ち込みます。",lv:"ゆっくり燃えて、しっかり続く愛。そばにいることで愛を示します。",wk:"マネジメント、不動産、運営。安定した軸が必要な場所。"},
+  {n:"陰の土",t:"庭",tr:"世話好きで現実的、静かに賢い人。庭が命を育てるように、忍耐と愛情で人を育てます。",lv:"思いやり深く誠実。相手の大切な小さなことを全部覚えています。",wk:"教育、ケア、企画、プロダクト、コミュニティ運営。"},
+  {n:"陽の金",t:"剣",tr:"率直で決断が早く、とことん公平。混乱を断ち切り、他の人が避けることをはっきり言います。正直さが武器です。",lv:"全力で誠実、基準は高め。甘い言葉より本当のことを選びます。",wk:"法律、エンジニア、金融、危機時のリーダー。"},
+  {n:"陰の金",t:"宝石",tr:"洗練されていて観察眼が鋭く、プレッシャーの中でこそ輝く人。質の良さを一目で見抜き、自分にも高い基準を課します。",lv:"選び抜く上品な愛。あなたの奥深さを理解してくれる人を求めます。",wk:"ブランド、美容、分析、細部が命の分野。"},
+  {n:"陽の水",t:"大海",tr:"心が広く自由で、好奇心が尽きない人。アイデアの潮流に乗り、全体の地図を見渡します。",lv:"冒険好きでオープン。自由な空間と、一緒に探検してくれる人が必要です。",wk:"貿易、旅、戦略、テクノロジー。グローバルな仕事。"},
+  {n:"陰の水",t:"雨",tr:"やさしく洞察力が高く、想像力豊か。他の人が気づかない気持ちや意味を感じ取ります。",lv:"繊細で情の深い愛。静かで正直な会話で絆を深めます。",wk:"アート、カウンセリング、執筆、直感を活かす仕事。"}
+ ],
+ cmp:{
+  heaven:{t:"天の縁（干合）",x:"サジュでは古典的な「干合」の組み合わせ。2人の日主が自然に引き合います。珍しく、磁石のようで、一緒に成長できる関係です。"},
+  mirror:{t:"鏡の関係",x:"同じ五行なので、すぐに分かり合えます。ただし、同じ死角も持っているのが課題です。"},
+  nourish:{t:"あなたが育てる",x:"あなたのエネルギーが相手を育てます。成長を後押しする支えと火花を与える存在。あなた自身も大切にされるよう気をつけて。"},
+  nourished:{t:"相手が育ててくれる",x:"相手のエネルギーがあなたを育てます。一緒にいると支えられ、本来の自分に近づける、とても居心地のよい組み合わせです。"},
+  challenge:{t:"あなたが刺激する",x:"あなたのエネルギーが相手を押します。刺激的で緊張感もあり、火花が散る時に互いに優しくいられればうまくいきます。"},
+  challenged:{t:"相手が刺激する",x:"相手のエネルギーがあなたを試します。コンフォートゾーンの外へ連れ出されますが、お互いの忍耐で成長できます。"}
+ }
+},
+zh:{
+ shout:"你的命運，<br>我來告訴你！<span class=\"ask\">你準備好了嗎？</span>",
+ docTitle:"Sajupia · K-Saju | 免費韓國四柱八字解讀",
+ h1a:"探索你的",h1b:"韓國命運",
+ hp:"免費韓國四柱八字解讀。<br>輸入生日，看五行、愛情與配對。",
+ formTitle:"輸入你的生日",nameLabel:"你的名字（選填）",namePh:"例如：小美",dobLabel:"你的生日",go:"揭曉我的命運",
+ s1b:"1 · 你的日主",s1t:"從出生日看見你的核心自我。",
+ s2b:"2 · 你的五行",s2t:"木、火、土、金或水。",
+ s3b:"3 · 你的配對",s3t:"加入伴侶，查看契合度。",
+ tag:"你的日主",
+ you:n=>n?n+"，<br>你的日主是":"你的日主是",youSuf:"",
+ pillEl:e=>e+"屬性",
+ pillYear:(e,b)=>I18N.zh.el[e]+I18N.zh.an[b]+"年",
+ fiveTitle:"你的五行",joiner:"、",
+ missing:l=>"你的年柱與日柱缺少：<b>"+l+"</b>。完整命盤會顯示它是否出現在其他柱。",
+ full:"你的年柱與日柱已出現五行全部元素。完整命盤會顯示它們如何平衡。",
+ readTitle:n=>n?n+"的解讀":"你的解讀",
+ who:"你是什麼樣的人",loveLbl:"你的愛情風格",workLbl:"你的事業能量",
+ matchTitle:"查看配對",partnerLabel:"伴侶或心儀對象的生日",matchBtn:"檢查契合度",youL:"你",themL:"對方",
+ lockTitle:"你的完整命運報告",
+ l1:"含出生時辰的完整八字命盤",l2:"愛情時機：你的好運何時到來",l3:"事業與財運週期",l4:"2027 年運勢預測",l5:"兩人的深度合盤報告",
+ soon:"完整報告即將推出",
+ shareTitle:"分享你的結果",shareBtn:"分享我的命運卡",againBtn:"解讀另一個生日",
+ copied:"已複製！貼到任何地方就能分享。",copyFail:"請長按網址列中的連結來複製。",
+ f1:"韓國四柱，供娛樂與自我探索",f2:"時柱解讀包含在完整報告中。",
+ needDob:"請輸入你的生日。",needDob2:"請輸入對方的生日。",
+ shareText:(s,t,e)=>"我是"+s+"・"+t+"（"+e+"）。來看看你的韓國四柱日主：",
+ cardTop:"我的日主",cardFoot:"免費測你的韓國四柱",
+ el:["木","火","土","金","水"],
+ an:["鼠","牛","虎","兔","龍","蛇","馬","羊","猴","雞","狗","豬"],
+ stems:[
+  {n:"陽木",t:"大樹",tr:"正直、有野心，天生的領導者。你筆直地朝目標生長，旁人都依靠你的力量，但你不愛彎腰，即使彎一下才是聰明的選擇。",lv:"忠誠而保護欲強。你會愛上讓你照自己方式成長的人。",wk:"創業者、領導者、建設者。擁有自己的願景時最耀眼。"},
+  {n:"陰木",t:"藤蔓",tr:"柔軟、迷人又安靜地堅強。你總能繞過每一道牆，你一笑，身邊的人就放鬆了。",lv:"浪漫又細心。對方還沒開口，你就讀懂了心情。",wk:"設計、面對人的工作與創意職務。你靠應變力取勝。"},
+  {n:"陽火",t:"太陽",tr:"溫暖、大膽，讓人無法忽視。你照亮整個空間，樂於分享功勞，挫折後也恢復得很快。",lv:"慷慨又熱情。你需要能欣賞你光芒的伴侶。",wk:"舞台、銷售、教學與面向大眾的領導角色。"},
+  {n:"陰火",t:"燭光",tr:"強烈、直覺敏銳又極度專注。你的溫暖很柔和，但你的腦袋會把別人漏掉的細節燃燒殆盡。",lv:"慢熱，一旦敞開心扉便全心投入。你渴望深刻而私密的連結。",wk:"研究、寫作、療癒工作與匠人精神。"},
+  {n:"陽土",t:"高山",tr:"穩重可靠，關鍵時刻紋風不動。大家把煩惱交給你，因為你從不慌張。",lv:"慢慢燃燒、承諾牢固。你用陪伴來表達愛。",wk:"管理、不動產、營運。任何需要穩定支柱的地方。"},
+  {n:"陰土",t:"花園",tr:"體貼、務實，默默有智慧。你像花園孕育生命一樣培育他人：有耐心，也很用心。",lv:"關懷又忠誠。你記得對方在乎的每一件小事。",wk:"教育、照護、規劃、產品與社群經營。"},
+  {n:"陽金",t:"利劍",tr:"直接、果斷，極度公正。你能斬斷混亂，說出別人不敢說的話。你的誠實就是你的鋒芒。",lv:"全心忠誠、標準很高。比起甜言蜜語，你更重視真話。",wk:"法律、工程、金融與危機中的領導。"},
+  {n:"陰金",t:"寶石",tr:"精緻、眼光銳利，越有壓力越出色。你一眼就能看出品質，也對自己要求很高。",lv:"挑剔而優雅。你想要懂得欣賞你深度的人。",wk:"品牌、美業、分析與講究細節的領域。"},
+  {n:"陽水",t:"大海",tr:"心胸開闊、自由奔放，好奇心無窮。你隨著想法的潮流前進，看得見整張地圖。",lv:"愛冒險、心態開放。你需要空間，也需要愛探索的伴侶。",wk:"貿易、旅行、策略、科技。凡是全球性的工作。"},
+  {n:"陰水",t:"雨露",tr:"溫柔、敏銳又富想像力。你能感受到別人從未察覺的情緒與意義。",lv:"細膩而深情。你靠安靜而真誠的對話建立連結。",wk:"藝術、諮詢、寫作與憑直覺的工作。"}
+ ],
+ cmp:{
+  heaven:{t:"天作之合",x:"在四柱八字裡，這是經典的天干相合：你們的日主會自然互相吸引。罕見、有磁場，適合一起成長。"},
+  mirror:{t:"鏡子型",x:"你們屬於同一個五行，一眼就懂彼此。挑戰是你們也有相同的盲點。"},
+  nourish:{t:"你滋養對方",x:"你的能量滋養著對方，給予支持與火花，幫助對方成長。也別忘了讓自己被好好照顧。"},
+  nourished:{t:"對方滋養你",x:"對方的能量滋養著你。待在這個人身邊，你會覺得被支持，也更像自己。非常舒服的組合。"},
+  challenge:{t:"你挑戰對方",x:"你的能量會推動對方。刺激又帶點張力，只要碰撞時彼此都保持善意，就能走得長久。"},
+  challenged:{t:"對方挑戰你",x:"對方的能量會考驗你。你會被帶出舒適圈。只要雙方有耐心，就有成長的空間。"}
+ }
+},
+es:{
+ shout:"¡Yo te digo tu destino!<span class=\"ask\">¿Estás listo?</span>",
+ docTitle:"Sajupia · K-Saju | Saju coreano gratis (Cuatro Pilares del Destino)",
+ h1a:"Descubre tu",h1b:"destino coreano",
+ hp:"Saju gratis <span class=\"nowrap\">(Cuatro Pilares del Destino)</span>, el horóscopo coreano. Tu elemento, tu estilo en el amor y tu mejor pareja.",
+ formTitle:"Ingresa tu fecha de nacimiento",nameLabel:"Tu nombre (opcional)",namePh:"ej. Sofía",dobLabel:"Tu fecha de nacimiento",go:"Revelar mi destino",
+ s1b:"1 · Tu Maestro del Día",s1t:"Tu esencia, según tu día de nacimiento.",
+ s2b:"2 · Tu Elemento",s2t:"Madera, Fuego, Tierra, Metal o Agua.",
+ s3b:"3 · Tu Pareja",s3t:"Añade a alguien y mira tu puntuación.",
+ tag:"TU MAESTRO DEL DÍA",
+ you:n=>n?n+",<br>eres ":"Eres ",youSuf:"",
+ pillEl:e=>"Elemento "+e,
+ pillYear:(e,b)=>"Año "+I18N.es.art[b]+" "+I18N.es.elDe[e],
+ art:["de la Rata","del Buey","del Tigre","del Conejo","del Dragón","de la Serpiente","del Caballo","de la Cabra","del Mono","del Gallo","del Perro","del Cerdo"],
+ elDe:["de Madera","de Fuego","de Tierra","de Metal","de Agua"],
+ fiveTitle:"Tus Cinco Elementos",joiner:" y ",
+ missing:l=>"Falta en tus pilares de año y día: <b>"+l+"</b>. Tu carta completa muestra si aparece en otro lugar.",
+ full:"Los cinco elementos aparecen en tus pilares de año y día. Tu carta completa muestra cómo se equilibran.",
+ readTitle:n=>n?"Lectura de "+n:"Tu lectura",
+ who:"Quién eres",loveLbl:"Tu estilo en el amor",workLbl:"Tu energía profesional",
+ matchTitle:"Mira tu compatibilidad",partnerLabel:"Fecha de nacimiento de tu pareja o crush",matchBtn:"Ver compatibilidad",youL:"Tú",themL:"Esa persona",
+ lockTitle:"Tu Informe de Destino completo",
+ l1:"Carta completa de 8 caracteres con hora de nacimiento",l2:"Momentos del amor: cuándo llegan tus mejores oportunidades",l3:"Ciclos de carrera y dinero",l4:"Pronóstico para 2027",l5:"Informe profundo de pareja para dos personas",
+ soon:"Informe completo, muy pronto",
+ shareTitle:"Comparte tu resultado",shareBtn:"Compartir mi tarjeta de destino",againBtn:"Leer otra fecha de nacimiento",
+ copied:"¡Copiado! Pégalo donde quieras para compartir.",copyFail:"Mantén pulsado el enlace de la barra de direcciones para copiarlo.",
+ f1:"Saju coreano para divertirte y reflexionar",f2:"La hora de nacimiento va en el informe completo.",
+ needDob:"Ingresa tu fecha de nacimiento.",needDob2:"Ingresa la fecha de nacimiento de la otra persona.",
+ shareText:(s,t,e)=>"Soy "+s+" — "+t+" (elemento "+e+"). Descubre tu Maestro del Día del Saju coreano:",
+ cardTop:"MI MAESTRO DEL DÍA",cardFoot:"Descubre el tuyo — Saju coreano gratis",
+ el:["Madera","Fuego","Tierra","Metal","Agua"],
+ an:["Rata","Buey","Tigre","Conejo","Dragón","Serpiente","Caballo","Cabra","Mono","Gallo","Perro","Cerdo"],
+ stems:[
+  {n:"Madera Yang",t:"El Gran Árbol",tr:"Íntegro, ambicioso y nacido para liderar. Creces recto hacia tus metas y los demás se apoyan en tu fuerza, pero odias doblarte, incluso cuando hacerlo sería lo más inteligente.",lv:"Leal y protector. Te enamoras de quien te deja crecer a tu manera.",wk:"Fundador, líder, constructor. Brillas cuando la visión es tuya."},
+  {n:"Madera Yin",t:"La Enredadera",tr:"Flexible, encantador y silenciosamente fuerte. Siempre encuentras la forma de rodear cualquier muro y la gente se relaja en cuanto sonríes.",lv:"Romántico y atento. Lees el ánimo de tu pareja antes de que diga una palabra.",wk:"Diseño, trato con personas y roles creativos. Ganas gracias a tu adaptabilidad."},
+  {n:"Fuego Yang",t:"El Sol",tr:"Cálido, atrevido e imposible de ignorar. Iluminas cualquier sala, compartes el mérito sin problema y te recuperas rápido de los tropiezos.",lv:"Generoso y apasionado. Necesitas a alguien que disfrute de tu brillo.",wk:"Escenario, ventas, enseñanza y liderazgo de cara al público."},
+  {n:"Fuego Yin",t:"La Vela",tr:"Intenso, intuitivo y muy concentrado. Tu calidez es suave, pero tu mente consume detalles que otros pasan por alto.",lv:"Tardas en abrirte, pero te entregas por completo. Buscas una conexión profunda y privada.",wk:"Investigación, escritura, artes sanadoras y maestría artesanal."},
+  {n:"Tierra Yang",t:"La Montaña",tr:"Estable, confiable e inmóvil cuando hace falta. La gente te cuenta sus problemas porque tú nunca entras en pánico.",lv:"Fuego lento y compromiso sólido. Demuestras amor estando presente.",wk:"Gestión, bienes raíces, operaciones. Allí donde se necesita un ancla firme."},
+  {n:"Tierra Yin",t:"El Jardín",tr:"Cuidadoso, práctico y discretamente sabio. Haces crecer a las personas como un jardín hace crecer la vida: con paciencia y mucho cariño.",lv:"Atento y leal. Recuerdas cada detalle que le importa a la otra persona.",wk:"Educación, cuidados, planificación, producto y comunidad."},
+  {n:"Metal Yang",t:"La Espada",tr:"Directo, decidido y férreamente justo. Cortas la confusión y dices lo que otros evitan. Tu honestidad es tu filo.",lv:"Lealtad total con altos estándares. Prefieres la verdad a las palabras dulces.",wk:"Derecho, ingeniería, finanzas y liderar en una crisis."},
+  {n:"Metal Yin",t:"La Joya",tr:"Refinado, de ojo agudo y pulido bajo presión. Detectas la calidad al instante y te exiges mucho.",lv:"Selectivo y elegante. Quieres a alguien que valore tu profundidad.",wk:"Marca, belleza, análisis y campos donde el detalle manda."},
+  {n:"Agua Yang",t:"El Océano",tr:"De mente amplia, libre y curioso sin fin. Te mueves con la marea de las ideas y ves el mapa completo.",lv:"Aventurero y abierto. Necesitas espacio y a alguien que ame explorar.",wk:"Comercio, viajes, estrategia, tecnología. Todo lo global."},
+  {n:"Agua Yin",t:"La Lluvia",tr:"Suave, perceptivo y de gran imaginación. Sientes estados de ánimo y significados que otros nunca notan.",lv:"Sensible y con alma. Conectas a través de conversaciones tranquilas y sinceras.",wk:"Arte, orientación, escritura y trabajo guiado por la intuición."}
+ ],
+ cmp:{
+  heaven:{t:"Pareja Celestial",x:"En el Saju es una combinación clásica de troncos: sus dos Maestros del Día se atraen de forma natural. Algo raro, magnético y hecho para crecer juntos."},
+  mirror:{t:"El Espejo",x:"Comparten el mismo elemento, así que se entienden al instante. El reto es que también comparten los mismos puntos ciegos."},
+  nourish:{t:"Tú lo nutres",x:"Tu energía alimenta la suya. Aportas el apoyo y la chispa que ayudan a esta persona a crecer. Solo asegúrate de recibir cuidados también."},
+  nourished:{t:"Te nutre",x:"Su energía alimenta la tuya. Estar cerca de esta persona te hace sentir apoyado y más tú mismo. Una pareja muy cómoda."},
+  challenge:{t:"Tú lo desafías",x:"Tu energía empuja la suya. Es emocionante y con tensión, y funciona si ambos siguen siendo amables cuando saltan chispas."},
+  challenged:{t:"Te desafía",x:"Su energía pone a prueba la tuya. Te sacará de tu zona de confort. Hay crecimiento posible, con paciencia por ambas partes."}
+ }
+},
+fr:{
+ shout:"Ton destin ? Je te le dis !<span class=\"ask\">Tu es prêt ?</span>",
+ docTitle:"Sajupia · K-Saju | Saju coréen gratuit (Quatre Piliers du Destin)",
+ h1a:"Découvre ton",h1b:"destin coréen",
+ hp:"Saju gratuit <span class=\"nowrap\">(Quatre Piliers du Destin)</span>, la divination coréenne. Ton élément, ton style amoureux et ton meilleur match.",
+ formTitle:"Entre ta date de naissance",nameLabel:"Ton prénom (facultatif)",namePh:"ex. Camille",dobLabel:"Ta date de naissance",go:"Révéler mon destin",
+ s1b:"1 · Ton Maître du Jour",s1t:"Ton essence, selon ton jour de naissance.",
+ s2b:"2 · Ton Élément",s2t:"Bois, Feu, Terre, Métal ou Eau.",
+ s3b:"3 · Ton Match",s3t:"Ajoute quelqu'un et vois votre score.",
+ tag:"TON MAÎTRE DU JOUR",
+ you:n=>n?n+",<br>tu es ":"Tu es ",youSuf:"",
+ pillEl:e=>"Élément "+e,
+ pillYear:(e,b)=>"Année "+I18N.fr.art[b]+" "+I18N.fr.elDe[e],
+ art:["du Rat","du Bœuf","du Tigre","du Lapin","du Dragon","du Serpent","du Cheval","de la Chèvre","du Singe","du Coq","du Chien","du Cochon"],
+ elDe:["de Bois","de Feu","de Terre","de Métal","d'Eau"],
+ fiveTitle:"Tes Cinq Éléments",joiner:" et ",
+ missing:l=>"Absent de tes piliers de l'année et du jour : <b>"+l+"</b>. Ton thème complet montre s'il apparaît ailleurs.",
+ full:"Les cinq éléments apparaissent dans tes piliers de l'année et du jour. Ton thème complet montre leur équilibre.",
+ readTitle:n=>n?"Lecture de "+n:"Ta lecture",
+ who:"Qui tu es",loveLbl:"Ton style amoureux",workLbl:"Ton énergie professionnelle",
+ matchTitle:"Vérifie votre compatibilité",partnerLabel:"Date de naissance de ton/ta partenaire ou crush",matchBtn:"Voir la compatibilité",youL:"Toi",themL:"L'autre",
+ lockTitle:"Ton Rapport de Destin complet",
+ l1:"Thème complet à 8 caractères avec l'heure de naissance",l2:"Timing amoureux : quand arrivent tes meilleures chances",l3:"Cycles de carrière et d'argent",l4:"Prévisions pour 2027",l5:"Rapport de couple approfondi pour deux personnes",
+ soon:"Rapport complet bientôt disponible",
+ shareTitle:"Partage ton résultat",shareBtn:"Partager ma carte de destin",againBtn:"Lire une autre date de naissance",
+ copied:"Copié ! Colle-le où tu veux pour partager.",copyFail:"Appuie longuement sur le lien dans la barre d'adresse pour le copier.",
+ f1:"Saju coréen pour le plaisir et la réflexion",f2:"L'heure de naissance est incluse dans le rapport complet.",
+ needDob:"Entre ta date de naissance.",needDob2:"Entre la date de naissance de l'autre personne.",
+ shareText:(s,t,e)=>"Je suis "+s+" — "+t+" (élément "+e+"). Découvre ton Maître du Jour Saju coréen :",
+ cardTop:"MON MAÎTRE DU JOUR",cardFoot:"Trouve le tien — Saju coréen gratuit",
+ el:["Bois","Feu","Terre","Métal","Eau"],
+ an:["Rat","Bœuf","Tigre","Lapin","Dragon","Serpent","Cheval","Chèvre","Singe","Coq","Chien","Cochon"],
+ stems:[
+  {n:"Bois Yang",t:"Le Grand Arbre",tr:"Droit, ambitieux et né pour diriger. Tu grandis tout droit vers tes objectifs et les autres s'appuient sur ta force, mais tu détestes plier, même quand ce serait malin.",lv:"Loyal et protecteur. Tu tombes pour ceux qui te laissent grandir à ta façon.",wk:"Fondateur, leader, bâtisseur. Tu brilles quand la vision t'appartient."},
+  {n:"Bois Yin",t:"La Vigne",tr:"Souple, charmant et discrètement solide. Tu contournes tous les murs et les gens se détendent dès que tu souris.",lv:"Romantique et attentionné. Tu lis l'humeur de l'autre avant même qu'il parle.",wk:"Design, métiers de contact et rôles créatifs. Tu gagnes par ta capacité d'adaptation."},
+  {n:"Feu Yang",t:"Le Soleil",tr:"Chaleureux, audacieux et impossible à ignorer. Tu illumines la pièce, partages le mérite sans compter et rebondis vite.",lv:"Généreux et passionné. Il te faut quelqu'un qui aime ton éclat.",wk:"Scène, vente, enseignement et leadership tourné vers le public."},
+  {n:"Feu Yin",t:"La Bougie",tr:"Intense, intuitif et très concentré. Ta chaleur est douce, mais ton esprit dévore les détails que les autres manquent.",lv:"Long à s'ouvrir, dévoué ensuite. Tu veux un lien profond et intime.",wk:"Recherche, écriture, arts de guérison et maîtrise artisanale."},
+  {n:"Terre Yang",t:"La Montagne",tr:"Stable, digne de confiance et inébranlable quand il le faut. On te confie ses soucis car tu ne paniques jamais.",lv:"Une flamme lente, un engagement solide. Tu montres ton amour en étant là.",wk:"Gestion, immobilier, opérations. Partout où il faut un ancrage solide."},
+  {n:"Terre Yin",t:"Le Jardin",tr:"Attentionné, pratique et discrètement sage. Tu fais grandir les gens comme un jardin fait pousser la vie : avec patience et soin.",lv:"Prévenant et loyal. Tu retiens chaque petit détail qui compte pour l'autre.",wk:"Éducation, soin, planification, produit et communauté."},
+  {n:"Métal Yang",t:"L'Épée",tr:"Direct, décidé et farouchement juste. Tu tranches dans la confusion et dis ce que d'autres évitent. Ta franchise est ta lame.",lv:"Loyauté totale, exigences élevées. Tu préfères la vérité aux douceurs.",wk:"Droit, ingénierie, finance et direction en temps de crise."},
+  {n:"Métal Yin",t:"Le Joyau",tr:"Raffiné, œil acéré et impeccable sous pression. Tu repères la qualité au premier regard et tu t'imposes un haut niveau.",lv:"Sélectif et élégant. Tu veux quelqu'un qui apprécie ta profondeur.",wk:"Marque, beauté, analyse et métiers où le détail compte."},
+  {n:"Eau Yang",t:"L'Océan",tr:"Esprit large, libre et d'une curiosité infinie. Tu suis la marée des idées et vois toute la carte.",lv:"Aventurier et ouvert. Il te faut de l'espace et quelqu'un qui aime explorer.",wk:"Commerce, voyage, stratégie, tech. Tout ce qui est global."},
+  {n:"Eau Yin",t:"La Pluie",tr:"Doux, perspicace et très imaginatif. Tu sens des humeurs et des sens que les autres ne remarquent jamais.",lv:"Sensible et profond. Tu t'attaches par des conversations calmes et sincères.",wk:"Art, accompagnement, écriture et travail guidé par l'intuition."}
+ ],
+ cmp:{
+  heaven:{t:"Union Céleste",x:"En Saju, c'est une combinaison classique de troncs : vos deux Maîtres du Jour s'attirent naturellement. Rare, magnétique et fait pour grandir ensemble."},
+  mirror:{t:"Le Miroir",x:"Vous partagez le même élément, donc vous vous comprenez tout de suite. Le défi : vous partagez aussi les mêmes angles morts."},
+  nourish:{t:"Tu le nourris",x:"Ton énergie alimente la sienne. Tu apportes le soutien et l'étincelle qui l'aident à grandir. Veille seulement à être soigné toi aussi."},
+  nourished:{t:"Il te nourrit",x:"Son énergie alimente la tienne. Près de cette personne, tu te sens soutenu et plus toi-même. Un duo très confortable."},
+  challenge:{t:"Tu le défies",x:"Ton énergie pousse la sienne. C'est excitant et plein de tension, et ça marche si vous restez bienveillants quand les étincelles volent."},
+  challenged:{t:"Il te défie",x:"Son énergie met la tienne à l'épreuve. Elle te sortira de ta zone de confort. La croissance est possible, avec de la patience des deux côtés."}
+ }
+}
+};
+
+const $=id=>document.getElementById(id);
+const LANGS=["en","ja","zh","es","fr"];
+let lang="en", current=null, lastMatch=null;
+const T=()=>I18N[lang];
+const esc=s=>String(s).replace(/[<>&"]/g,"");
+
+function detect(){
+  try{
+    const q=new URLSearchParams(location.search).get("lang");
+    if(q && LANGS.includes(q)) return q;
+  }catch(e){}
+  try{
+    const s=localStorage.getItem("sajupia_lang");
+    if(s && LANGS.includes(s)) return s;
+  }catch(e){}
+  const n=(navigator.language||"en").toLowerCase();
+  if(n.startsWith("ja")) return "ja";
+  if(n.startsWith("es")) return "es";
+  if(n.startsWith("fr")) return "fr";
+  if(n.startsWith("zh") && /(tw|hk|mo|hant)/.test(n)) return "zh";
+  return "en";
+}
+function applyStatic(){
+  const t=T();
+  document.documentElement.lang = lang==="zh" ? "zh-Hant" : lang;
+  document.title=t.docTitle;
+  document.querySelectorAll("[data-k]").forEach(el=>{ el.innerHTML=t[el.getAttribute("data-k")]; });
+  $("name").placeholder=t.namePh;
+  document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c.getAttribute("data-lang")===lang));
+}
+function setLang(l){
+  lang=l;
+  try{localStorage.setItem("sajupia_lang",l);}catch(e){}
+  applyStatic();
+  if(current) paintResult();
+  if(lastMatch) paintMatch();
+}
+function parseDate(v){
+  if(!v) return null;
+  const p=v.split("-").map(Number);
+  if(p.length!==3||p.some(isNaN)) return null;
+  const [y,m,d]=p;
+  if(y<1900||y>2100) return null;
+  return {y,m,d};
+}
+function paintResult(){
+  const t=T(), c=current, P=c.P;
+  const S=t.stems[P.dayStem], sm=STEM_META[P.dayStem];
+  const elName=t.el[sm.e], col=EL_COLOR[sm.e];
+  const nm=c.nm;
+  const card=$("resCard");
+  card.style.background="linear-gradient(160deg,"+col+",#111111)";
+  card.innerHTML=
+    '<div class="tag">'+t.tag+'</div>'+
+    '<div class="big">'+sm.h+BR_META[P.dayBranch].h+'</div>'+
+    '<h2>'+t.you(nm)+'<span class="nowrap">'+S.n+t.youSuf+'</span></h2>'+
+    '<div class="sub">'+S.t+'</div>'+
+    '<span class="pill">'+t.pillEl(elName)+'</span>'+
+    '<span class="pill">'+t.pillYear(STEM_META[P.yearStem].e,P.yearBranch)+'</span>';
+
+  const cnt=[0,0,0,0,0];
+  cnt[STEM_META[P.yearStem].e]++; cnt[BR_META[P.yearBranch].e]++; cnt[sm.e]++; cnt[BR_META[P.dayBranch].e]++;
+  $("bars").innerHTML=t.el.map((n,i)=>
+    '<div class="bar"><span style="color:'+EL_COLOR[i]+'">'+n+'</span><div class="track"><div class="fill" style="width:'+(cnt[i]/4*100)+'%;background:'+EL_COLOR[i]+'"></div></div><span>'+cnt[i]+'</span></div>'
+  ).join("");
+  const miss=t.el.filter((n,i)=>cnt[i]===0);
+  $("missing").innerHTML = miss.length ? t.missing(miss.join(t.joiner)) : t.full;
+
+  $("readTitle").textContent=t.readTitle(nm);
+  $("rTrait").textContent=S.tr;
+  $("rLove").textContent=S.lv;
+  $("rWork").textContent=S.wk;
+}
+function reveal(){
+  const dt=parseDate($("dob").value);
+  if(!dt){ alert(T().needDob); return; }
+  current={P:pillars(dt.y,dt.m,dt.d),nm:esc(($("name").value||"").trim())};
+  lastMatch=null;
+  paintResult();
+  $("matchOut").classList.add("hidden");
+  $("formArea").classList.add("hidden");
+  $("resultArea").classList.remove("hidden");
+  $("resCard").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function paintMatch(){
+  const t=T(), r=lastMatch;
+  $("mScore").textContent=r.score+"%";
+  $("mMeter").style.width=r.score+"%";
+  $("mTitle").innerHTML='<b>'+t.cmp[r.key].t+'</b><br>'+t.youL+': '+t.stems[current.P.dayStem].n+' · '+t.themL+': '+t.stems[r.stem].n;
+  $("mText").textContent=t.cmp[r.key].x;
+  $("matchOut").classList.remove("hidden");
+}
+function match(){
+  const dt=parseDate($("dob2").value);
+  if(!dt){ alert(T().needDob2); return; }
+  const P2=pillars(dt.y,dt.m,dt.d);
+  const r=compat(current.P.dayStem,P2.dayStem);
+  lastMatch={score:r.score,key:r.key,stem:P2.dayStem};
+  paintMatch();
+}
+function fit(x,txt,weight,px,maxW){
+  let s=px;
+  do{ x.font=weight+" "+s+"px sans-serif"; s-=2; }while(x.measureText(txt).width>maxW && s>20);
+}
+function drawCard(){
+  const t=T(), P=current.P, sm=STEM_META[P.dayStem], S=t.stems[P.dayStem];
+  const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;
+  const x=c.getContext("2d");
+  const g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,EL_COLOR[sm.e]);g.addColorStop(1,"#111111");
+  x.fillStyle=g;x.fillRect(0,0,W,H);
+  x.textAlign="center";x.fillStyle="#FFFFFF";
+  x.font="900 44px sans-serif";x.fillText("SAJUPIA · K-SAJU",W/2,120);
+  fit(x,t.cardTop,"900",70,960);x.fillText(t.cardTop,W/2,290);
+  x.font="900 300px sans-serif";x.fillText(sm.h+BR_META[P.dayBranch].h,W/2,620);
+  fit(x,S.n,"900",92,960);x.fillText(S.n,W/2,780);
+  fit(x,S.t,"800",66,960);x.fillText(S.t,W/2,880);
+  x.fillRect(240,950,600,8);
+  const l1=t.pillEl(t.el[sm.e]), l2=t.pillYear(STEM_META[P.yearStem].e,P.yearBranch);
+  fit(x,l1,"800",54,960);x.fillText(l1,W/2,1045);
+  fit(x,l2,"800",54,960);x.fillText(l2,W/2,1125);
+  x.fillStyle="#F59E0B";
+  fit(x,t.cardFoot,"900",52,960);x.fillText(t.cardFoot,W/2,1250);
+  return c;
+}
+async function share(){
+  const t=T(), msg=$("shareMsg"), sm=STEM_META[current.P.dayStem];
+  const text=t.shareText(t.stems[current.P.dayStem].n,t.stems[current.P.dayStem].t,t.el[sm.e]);
+  let url=location.href.split("#")[0];
+  try{ const u=new URL(location.href); u.hash=""; u.searchParams.set("lang",lang); url=u.toString(); }catch(e){}
+  const blob=await new Promise(r=>drawCard().toBlob(r,"image/png"));
+  try{
+    const f=blob?new File([blob],"sajupia.png",{type:"image/png"}):null;
+    if(f && navigator.canShare && navigator.canShare({files:[f]})){
+      await navigator.share({files:[f],text:text+" "+url}); return;
+    }
+    if(navigator.share){ await navigator.share({text:text,url:url}); return; }
+  }catch(e){ if(e&&e.name==="AbortError") return; }
+  try{ await navigator.clipboard.writeText(text+" "+url); msg.textContent=t.copied; }
+  catch(e){ msg.textContent=t.copyFail; }
+  msg.classList.remove("hidden");
+}
+document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>setLang(b.getAttribute("data-lang"))));
+$("goBtn").addEventListener("click",reveal);
+$("matchBtn").addEventListener("click",match);
+$("shareBtn").addEventListener("click",share);
+$("againBtn").addEventListener("click",()=>{
+  current=null;lastMatch=null;
+  $("resultArea").classList.add("hidden");$("formArea").classList.remove("hidden");
+  $("dob").value="";$("dob2").value="";window.scrollTo({top:0,behavior:"smooth"});
+});
+setLang(detect());
+</script>
+</body>
+</html>
